@@ -27,9 +27,12 @@ router.post(
       .trim()
       .isLength({ min: 3 })
       .withMessage("rollno must be at least 3 characters"),
+    body("userType")
+      .trim()
+      .isLength({ min: 3 })
+      .withMessage("userType must be at least 3 characters"),
   ],
   userController
 );
-
 
 export default router;

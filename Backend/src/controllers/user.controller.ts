@@ -1,8 +1,9 @@
 import { error } from "console";
 import { Request, Response } from "express";
 import userModel from "../model/user.model";
-import { IUser } from "../model/user.model";
+
 import { createUser } from "../services/userService";
+import { IUser } from "../types/userTypes";
 const { validationResult } = require("express-validator");
 
 export const userController = async (req: Request, res: Response) => {
@@ -11,8 +12,17 @@ export const userController = async (req: Request, res: Response) => {
     return res.status(201).json({ error: errors });
   }
   try {
-    const { fullname, email, password, school, rollno, standard } = req.body;
-    if (!fullname || !email || !password || !school || !rollno || !standard) {
+    const { fullname, email, password, school, rollno, standard, userType } =
+      req.body;
+    if (
+      !fullname ||
+      !email ||
+      !password ||
+      !school ||
+      !rollno ||
+      !standard ||
+      !userType
+    ) {
       return res.status(400).json({ error: "All fields are required" });
     }
 
@@ -23,7 +33,8 @@ export const userController = async (req: Request, res: Response) => {
       hashedPassword,
       school,
       rollno,
-      standard
+      standard,
+      userType
     )) as unknown as IUser;
     if (!user) {
       return res.status(500).json({ error: "User creation failed" });

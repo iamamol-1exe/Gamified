@@ -3,7 +3,7 @@ import cors from "cors";
 import path from "path";
 import dotenv from "dotenv";
 import userRouter from "./routes/user.routes";
-
+import teacherRouter from "./routes/teacher.routes";
 const app = express();
 
 const allowedDomains = [" ", "http://localhost:5173", "http://localhost:8080"];
@@ -22,6 +22,7 @@ app.get("/health", (req: Request, res: Response) => {
   res.send("Server is Running ");
 });
 
-app.use("/user/api",userRouter);
+app.use("/user/api", userRouter);
+app.use("/teacher/api", teacherRouter);
 
 export default app;

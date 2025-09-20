@@ -1,13 +1,4 @@
-export interface IUser extends mongoose.Document {
-  fullname: string;
-  email: string;
-  password: string;
-  class: string;
-  rollNo: string;
-  schoolName: string;
-  generateAuthToken(): string;
-  hashPassword(password: string): Promise<string>;
-}
+import { IUser } from "../types/userTypes";
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
@@ -77,6 +68,11 @@ const userSchema = new mongoose.Schema({
   },
   schoolName: {
     type: String,
+  },
+  userType: {
+    type: String,
+
+    require: true,
   },
 });
 

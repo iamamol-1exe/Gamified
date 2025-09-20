@@ -6,9 +6,18 @@ export const createUser = async (
   password: string,
   school: string,
   rollno: string,
-  standard: string
+  standard: string,
+  userType: string
 ) => {
-  if (!fullname || !email || !password || !school || !rollno || !standard) {
+  if (
+    !fullname ||
+    !email ||
+    !password ||
+    !school ||
+    !rollno ||
+    !standard ||
+    !userType
+  ) {
     throw new Error("All fields are required");
   }
   const user = await userModel.create({
@@ -18,6 +27,7 @@ export const createUser = async (
     class: standard,
     rollNo: rollno,
     schoolName: school,
+    userType: userType,
   });
   return user;
 };
