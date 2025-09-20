@@ -5,20 +5,18 @@ import Login from "./pages/login";
 import { Route, Routes } from "react-router-dom";
 import UserPage from "./pages/UserPage";
 import LeaderBoardPage from "./pages/LeaderBoardPage";
-import ProfilePage from "./pages/ProfilePage"
 
 function App() {
-//   return (
-//     <>
-//       <Routes>
-//         <Route path="/" element={<LandingPage></LandingPage>} />
-//         <Route path="/login" element={<Login></Login>} />
-//         <Route path="/dashboard" element={<UserPage />} />
-//         <Route path="/leaderboard" element={<LeaderBoardPage />} />
-//         <Route path="/profilepage" element={<ProfilePage />} />
-//       </Routes>
-//     </>
-//   );
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<LandingPage></LandingPage>} />
+        <Route path="/login" element={<Login></Login>} />
+        <Route path="/dashboard" element={<UserPage />} />
+        <Route path="/leaderboard" element={<LeaderBoardPage />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

@@ -11,9 +11,10 @@ const LandingPage = () => {
     <div className="bg-gray-50 font-sans">
       <main>
         <Hero />
+        <CTA />
         <Features />
         <SubFeatures />
-        <CTA />
+        
       </main>
     </div>
   );
