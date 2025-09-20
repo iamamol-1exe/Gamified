@@ -1,7 +1,10 @@
 import React from 'react'
+import Leaderboard from '../Components/Leaderboard'
 
 export const Analytics = () => {
   return (
-    <div>Analytics</div>
+    <div>
+      <Leaderboard />
+    </div>
   )
 }

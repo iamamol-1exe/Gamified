@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Blob, GithubIcon, GoogleIcon } from "../shapes/LoginShapes";
 import logo from "../assets/boy.jpg";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -111,7 +112,7 @@ const Login = () => {
                   handleSubmit(e);
                 }}
                 type="submit"
-                className="w-full bg-[#D0B9FF]   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
+                className="bg-purple-400 text-white w-full bg-[#D0B9FF]   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
               >
                 Login
               </button>
@@ -119,12 +120,12 @@ const Login = () => {
 
             <p className="text-center text-gray-600 mt-6">
               Don't have an Account?{" "}
-              <a
-                href="#"
+              <Link
+                to="/registration"
                 className="text-bg-[#D0B9FF] font-semibold hover:underline"
               >
                 Register
-              </a>
+              </Link>
             </p>
           </div>
         </main>

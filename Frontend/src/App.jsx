@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import UserPage from "./pages/UserPage";
 import LeaderBoardPage from "./pages/LeaderBoardPage";
 import Registration from "./pages/Registration";
+import { Analytics } from "./pages/Analytics";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/dashboard" element={<UserPage />} />
         <Route path="/leaderboard" element={<LeaderBoardPage />} />
+        <Route path="/analytics" element={<Analytics />} />
       </Routes>
     </>
   );

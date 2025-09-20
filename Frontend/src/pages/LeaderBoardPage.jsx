@@ -19,7 +19,7 @@ const LeaderBoardPage = () => {
         <div className="mt-16">
           {" "}
           {/* Adjust this value based on header height */}
-          <Leaderboard />
+          {/* <Leaderboard /> */}
           <Footer />
         </div>
       </div>
