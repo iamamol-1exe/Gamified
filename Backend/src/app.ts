@@ -4,6 +4,7 @@ import path from "path";
 import dotenv from "dotenv";
 import userRouter from "./routes/user.routes";
 import teacherRouter from "./routes/teacher.routes";
+import adminRouter from "./routes/admin.routes";
 const app = express();
 
 const allowedDomains = [" ", "http://localhost:5173", "http://localhost:8080"];
@@ -24,5 +25,6 @@ app.get("/health", (req: Request, res: Response) => {
 
 app.use("/user/api", userRouter);
 app.use("/teacher/api", teacherRouter);
+app.use("/admin/api", adminRouter);
 
 export default app;
