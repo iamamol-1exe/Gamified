@@ -3,18 +3,15 @@ import { Blob, GithubIcon, GoogleIcon } from "../shapes/LoginShapes";
 import logo from "../assets/boy.jpg";
 
 const Login = () => {
-  const [Fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(Fullname);
     console.log(email);
     console.log(password);
     setEmail("");
     setPassword("");
-    setFullname("");
   };
 
   return (
@@ -48,11 +45,11 @@ const Login = () => {
           {/* Right Side: Form */}
           <div className="p-8 md:p-12 flex flex-col justify-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">
-              Create your Free Account
+              Create Your Account
             </h1>
 
             <form className="space-y-6">
-              <div>
+              {/* <div>
                 <label
                   htmlFor="fullName"
                   className="block text-sm font-medium text-gray-600 mb-1  text-left"
@@ -69,7 +66,7 @@ const Login = () => {
                   placeholder="Enter your Full Name here"
                   className="w-full px-4 py-3 bg-gray-300 border-gray-300 placeholder:text-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
                 />
-              </div>
+              </div> */}
 
               <div>
                 <label
@@ -116,17 +113,17 @@ const Login = () => {
                 type="submit"
                 className="w-full bg-[#D0B9FF]   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
               >
-                Create Account
+                Login
               </button>
             </form>
 
             <p className="text-center text-gray-600 mt-6">
-              Already have a account?{" "}
+              Don't have an Account?{" "}
               <a
                 href="#"
                 className="text-bg-[#D0B9FF] font-semibold hover:underline"
               >
-                Log in
+                Register
               </a>
             </p>
           </div>
