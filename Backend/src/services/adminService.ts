@@ -1,20 +1,18 @@
-import teacherModel from "../model/teacher.model";
+import adminModel from "../model/admin.model";
 
-export const createTeacher = async (
+export const createAdmin = async (
   fullname: string,
   email: string,
   password: string,
-  school: string,
   userType: string
 ) => {
-  if ((!fullname || !email || !password || !school|| !userType)) {
+  if (!fullname || !email || !password || !userType) {
     throw new Error("All fields are required");
   }
-  const user = await teacherModel.create({
+  const user = await adminModel.create({
     fullname: fullname,
     email: email,
     password: password,
-    schoolName: school,
     userType: userType,
   });
   return user;
