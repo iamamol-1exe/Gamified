@@ -1,9 +1,19 @@
+export interface IUser extends mongoose.Document {
+  fullname: string;
+  email: string;
+  password: string;
+  class: string;
+  rollNo: string;
+  schoolName: string;
+  generateAuthToken(): string;
+  hashPassword(password: string): Promise<string>;
+}
 import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
 const userSchema = new mongoose.Schema({
-  name: { type: String },
+  fullname: { type: String, required: true },
   email: {
     type: String,
     required: true,
@@ -70,14 +80,14 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.methods.genrateAuthToken = function () {
+userSchema.methods.generateAuthToken = function () {
   const secret: string = process.env.JWT_Secret || "amold";
-  const token = jwt.sign({ id: this.id }, secret);
+  return jwt.sign({ id: this.id }, secret);
 };
 userSchema.methods.comparePassword = async function (password: string) {
   return await bcrypt.compare(password, this.password);
 };
-userSchema.statics.hashPassword = async function (password) {
+userSchema.methods.hashPassword = async function (password: string) {
   return await bcrypt.hash(password, 10);
 };
 
