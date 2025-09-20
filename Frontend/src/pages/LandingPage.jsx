@@ -9,14 +9,12 @@ import SubFeatures from "../Components/SubFeatures";
 const LandingPage = () => {
   return (
     <div className="bg-gray-50 font-sans">
-      <Header />
       <main>
         <Hero />
         <Features />
         <SubFeatures />
         <CTA />
       </main>
-      <Footer />
     </div>
   );
 };

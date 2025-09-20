@@ -2,6 +2,7 @@ import React from "react";
 import { BellIcon, MenuIcon } from "../shapes/DashBoardShapes";
 
 const Header = ({ onMenuClick }) => {
+  
   return (
     <header className="bg-[#D0B9FF] shadow-sm p-4 flex justify-between items-center">
       <div className="flex items-center">
