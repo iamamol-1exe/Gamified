@@ -159,11 +159,16 @@ const Login = () => {
               <button
                 type="submit"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="bg-purple-400 text-white w-full   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
 =======
                 disabled={isLoading}
                 className="bg-purple-400 text-white w-full font-bold py-3 rounded-xl hover:bg-purple-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
 >>>>>>> ef74179dd9804a6c31002636f17ec42dc31695ed
+=======
+                disabled={isLoading}
+                className="bg-purple-400 text-white w-full font-bold py-3 rounded-xl hover:bg-purple-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+>>>>>>> d97bbb49736ddcaa7b71f4a79328c468d9ac63d9
               >
                 {isLoading ? "Logging In..." : "Login"}
               </button>
