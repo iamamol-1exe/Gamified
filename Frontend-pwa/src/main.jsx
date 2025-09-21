@@ -19,6 +19,9 @@ import ProfilePage from "./pages/ProfilePage.jsx";
 import Registration from "./pages/Registration.jsx";
 import Analytics from "./pages/Analytics.jsx";
 import TeacherAnalytics from "./pages/TeacherAnalytics.jsx";
+import StudentPerformance from "./pages/StudentPerformance.jsx";
+import QuizForm from "./pages/QuizForm.jsx";
+import StudentQuiz from "./pages/StudentQuiz.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +35,10 @@ const router = createBrowserRouter(
         <Route path="leaderboard" element={<LeaderBoardPage />} />
         <Route path="Analytics" element={<Analytics />} />
         <Route path="TeacherAnalytics" element={<TeacherAnalytics />} />
+        <Route path="studentperformance" element={<StudentPerformance />} />
+        <Route path="quizform" element={<QuizForm />} />
+        <Route path="studentquiz" element={<StudentQuiz />} />
+
       </Route>
     </>
   )
