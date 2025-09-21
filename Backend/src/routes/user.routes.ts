@@ -1,6 +1,9 @@
 import express from "express";
 const { body } = require("express-validator");
-import { userController } from "../controllers/user.controller";
+import {
+  userController,
+  userLoginController,
+} from "../controllers/user.controller";
 const router = express.Router();
 
 router.post(
@@ -33,6 +36,18 @@ router.post(
       .withMessage("userType must be at least 3 characters"),
   ],
   userController
+);
+
+router.post(
+  "/login",
+  [
+    body("email").isEmail().trim(),
+    body("password")
+      .trim()
+      .isLength({ min: 3 })
+      .withMessage("password must be at least 3 characters"),
+  ],
+  userLoginController
 );
 
 export default router;
