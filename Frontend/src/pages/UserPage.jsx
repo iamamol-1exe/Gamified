@@ -5,7 +5,7 @@ import Sidebar from "../Components/SideBar";
 import Header from "../Components/Header";
 
 const UserPage = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true );
+  const [isSidebarOpen, setSidebarOpen] = useState(false );
   // Prevent scrolling on the body
   return (
     <div>
@@ -20,13 +20,13 @@ const UserPage = () => {
               isSidebarOpen ? "ml-64" : "ml-0"
             }`}
           >
-            <Header onMenuClick={() => setSidebarOpen(!isSidebarOpen)} />
+            {/* <Header onMenuClick={() => setSidebarOpen(!isSidebarOpen)} /> */}
             <main className="p-6" style={{ overflow: "hidden" }}>
               <Dashboard />
             </main>
           </div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
   );
