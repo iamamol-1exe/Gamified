@@ -1,17 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
+import App from "./App";
+import { AuthProvider } from "./context/AuthContext";
 import {
-  BrowserRouter,
   RouterProvider,
   Route,
   createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
-import { createRoutesFromElements } from "react-router-dom";
+
+// Import your page components
 import Layout from "./pages/Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import UserPage from "./pages/UserPage.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import LeaderBoardPage from "./pages/LeaderBoardPage.jsx";
@@ -32,6 +34,7 @@ const router = createBrowserRouter(
         <Route path="leaderboard" element={<LeaderBoardPage />} />
         <Route path="Analytics" element={<Analytics />} />
         <Route path="TeacherAnalytics" element={<TeacherAnalytics />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
     </>
   )
@@ -39,9 +42,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <BrowserRouter>
-      <App />
-    </BrowserRouter> */}
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );
