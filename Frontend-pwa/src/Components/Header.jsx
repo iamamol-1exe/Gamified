@@ -5,9 +5,10 @@ const Header = ({ onMenuClick }) => {
   return (
     <header className="bg-[#D0B9FF] shadow-sm p-4 flex justify-between items-center">
       <div className="flex items-center">
-        <button
-          onClick={onMenuClick}
-          className="flex items-center space-x-2 mr-4 focus:outline-none"
+        {/* The entire div is now clickable */}
+        <div 
+          onClick={onMenuClick} 
+          className="flex items-center space-x-2 mr-4 cursor-pointer"
         >
           <div className="p-2 bg-purple-600 rounded-lg">
             <svg
@@ -28,21 +29,21 @@ const Header = ({ onMenuClick }) => {
           <h1 className="text-xl font-bold text-gray-800 hidden sm:block">
             STEM Quest
           </h1>
-        </button>
+        </div>
       </div>
       <div className="flex items-center space-x-6">
-        <a
+        {/* <a
           href="#"
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
           Home
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="#"
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
           Logout
-        </a>
+        </a> */}
         <button className="relative text-gray-600">
           <BellIcon className="w-6 h-6" />
           <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-purple-600 ring-2 ring-white"></span>

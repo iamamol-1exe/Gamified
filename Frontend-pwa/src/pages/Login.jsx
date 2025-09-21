@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Blob, GithubIcon, GoogleIcon } from "../shapes/LoginShapes";
 import logo from "../assets/boy.jpg";
 import { Link } from "react-router-dom";
-
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +18,7 @@ const Login = () => {
 
   return (
     <div>
+      <Header/>
       <div className="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
         <main className="w-full max-w-5xl m-4 bg-white shadow-2xl rounded-3xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
           {/* Left Side: Image and Decorative Background - Now visible on all screen sizes */}
@@ -112,7 +114,7 @@ const Login = () => {
                   handleSubmit(e);
                 }}
                 type="submit"
-                className="bg-purple-400 text-white w-full bg-[#D0B9FF]   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
+                className="bg-purple-400 text-white w-full   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
               >
                 Login
               </button>
@@ -130,6 +132,7 @@ const Login = () => {
           </div>
         </main>
       </div>
+      <Footer />
     </div>
   );
 };

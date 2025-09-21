@@ -5,7 +5,7 @@ import Sidebar from "../Components/SideBar";
 import Header from "../Components/Header";
 
 const LeaderBoardPage = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen bg-gray-50 font-sans">
@@ -15,12 +15,11 @@ const LeaderBoardPage = () => {
           isSidebarOpen ? "ml-64" : "ml-0"
         }`}
       >
-        <Header onMenuClick={() => setSidebarOpen(!isSidebarOpen)} />
+        {/* <Header onMenuClick={() => setSidebarOpen(!isSidebarOpen)} /> */}
         <div className="mt-16">
           {" "}
           {/* Adjust this value based on header height */}
-          {/* <Leaderboard /> */}
-          <Footer />
+          <Leaderboard />
         </div>
       </div>
     </div>
