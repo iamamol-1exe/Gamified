@@ -46,13 +46,13 @@ const Header = ({ onMenuClick }) => {
         </div>
       </div>
       <div className="flex items-center space-x-6">
-        <a
+        {/* <a
           href="#"
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
           Home
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="#"
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
