@@ -2,8 +2,11 @@ import express from "express";
 import {
   addQuestionsController,
   adminLoginController,
+  adminProfileController,
+  logoutAdminController,
   registerAdmin,
 } from "../controllers/admin.controller";
+import { authenticate, authenticateAdmin } from "../middleware/authMiddleware";
 
 const { body } = require("express-validator");
 const router = express.Router();
@@ -59,7 +62,13 @@ router.post(
       .isLength({ min: 3 })
       .withMessage("subject must be at least 3 characters"),
   ],
+  authenticate,
   addQuestionsController
 );
+
+router.get("/logout", authenticateAdmin, logoutAdminController);
+4;
+
+router.get("/profile", authenticateAdmin, adminProfileController);
 
 export default router;

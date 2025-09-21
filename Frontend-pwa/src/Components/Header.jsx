@@ -18,6 +18,7 @@ const Header = ({ onMenuClick }) => {
   return (
     <header className="bg-[#D0B9FF] shadow-sm p-4 flex justify-between items-center">
       {/* --- Left Side: Logo and Title --- */}
+      {/* --- Left Side: Logo and Title --- */}
       <div className="flex items-center">
         <div 
           onClick={onMenuClick} 
@@ -44,6 +45,8 @@ const Header = ({ onMenuClick }) => {
           </h1>
         </div>
       </div>
+
+      {/* --- Right Side: Icons and Pop-ups --- */}
 
       {/* --- Right Side: Icons and Pop-ups --- */}
       <div className="flex items-center space-x-6">
@@ -82,3 +85,8 @@ const Header = ({ onMenuClick }) => {
 };
 
 export default Header;
+
+// Add PropTypes validation
+Header.propTypes = {
+  onMenuClick: PropTypes.func.isRequired,
+};

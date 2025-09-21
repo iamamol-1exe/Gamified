@@ -42,8 +42,8 @@ const Login = () => {
       });
       setMessage({ type: "success", text: response.data.message });
       console.log("Login success:", response.data);
-      localStorage.setItem("token",response.data.token);
-      localStorage.setItem("user",response.data.user); 
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", response.data.user);
       // In a real app, you would navigate to the dashboard here.
       navigate("/userpage");
     } catch (error) {
