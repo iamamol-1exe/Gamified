@@ -97,7 +97,6 @@ const Registration = () => {
 
   return (
     <div>
-      <Header/>
     <div className="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
       <main className="w-full max-w-5xl m-4 bg-white shadow-2xl rounded-3xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
         {/* Left Side */}
@@ -281,7 +280,6 @@ const Registration = () => {
         </div>
       </main>
     </div>
-    <Footer/>
     </div>
   );
 };

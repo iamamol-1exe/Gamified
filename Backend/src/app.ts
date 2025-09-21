@@ -17,7 +17,7 @@ app.use(
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
-app.use(express.json({ limit: "10mb" }));
+app.use(express.json());
 
 app.get("/health", (req: Request, res: Response) => {
   res.send("Server is Running ");
