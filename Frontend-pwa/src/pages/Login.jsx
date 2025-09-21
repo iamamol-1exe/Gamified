@@ -114,7 +114,7 @@ const Login = () => {
                   handleSubmit(e);
                 }}
                 type="submit"
-                className="bg-purple-400 text-white w-full bg-[#D0B9FF]   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
+                className="bg-purple-400 text-white w-full   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
               >
                 Login
               </button>

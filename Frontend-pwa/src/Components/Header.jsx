@@ -32,18 +32,18 @@ const Header = ({ onMenuClick }) => {
         </div>
       </div>
       <div className="flex items-center space-x-6">
-        <a
+        {/* <a
           href="#"
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
           Home
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="#"
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
           Logout
-        </a>
+        </a> */}
         <button className="relative text-gray-600">
           <BellIcon className="w-6 h-6" />
           <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-purple-600 ring-2 ring-white"></span>
