@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import { Blob } from "../shapes/LoginShapes";
+import { useContext, useState } from "react";
+
 import logo from "../assets/boy.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useAuth } from "../context/AuthContext";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import { AuthContext } from "../context/AuthContext";
 
 // This is the corrected way to access environment variables in a Vite project
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -16,6 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
+  const { setUser, user } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -42,10 +41,15 @@ const Login = () => {
       });
       setMessage({ type: "success", text: response.data.message });
       console.log("Login success:", response.data);
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem("user", response.data.user);
-      // In a real app, you would navigate to the dashboard here.
-      navigate("/userpage");
+      const userData = response.data.user;
+
+      // Use the login function from context instead of setUser directly
+      setUser(userData);
+      console.log("Login success:", user);
+      // Navigate after state is updated
+      setTimeout(() => {
+        navigate("/userpage");
+      }, 100);
     } catch (error) {
       const errorMsg =
         error.response?.data?.message || "An unexpected error occurred.";
@@ -167,7 +171,7 @@ const Login = () => {
             </form>
 
             <p className="text-center text-gray-600 mt-6">
-              Don't have an Account?{" "}
+              Don&apos;t have an Account?{" "}
               <Link
                 to="/registration"
                 className="text-purple-600 font-semibold hover:underline"

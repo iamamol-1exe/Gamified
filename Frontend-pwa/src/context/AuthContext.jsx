@@ -1,37 +1,42 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState, useEffect } from "react";
 
 // 1. Create the context
-const AuthContext = createContext(null);
+export const AuthContext = createContext(null);
 
 // 2. Create the AuthProvider component
 export const AuthProvider = ({ children }) => {
-  // State to hold the authentication status and user data
-  const [user, setUser] = useState(null); // null when logged out, user object when logged in
+  // Initialize user state from localStorage if available
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem("user");
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
 
-  // NOTE: In a real app, you would check localStorage for a token here
-  // to keep the user logged in across page refreshes.
+  // Update localStorage when user changes
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem("user", JSON.stringify(user));
+    } else {
+      localStorage.removeItem("user");
+    }
+  }, [user]);
 
   const login = (userData) => {
     setUser(userData);
-    // NOTE: In a real app, you would also save the token to localStorage here
+    console.log("User logged in successfully");
   };
 
   const logout = () => {
     setUser(null);
-    // NOTE: In a real app, you would also remove the token from localStorage here
   };
 
   // Create a boolean flag for easier checking
   const isAuthenticated = !!user;
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, user, login, logout }}>
+    <AuthContext.Provider
+      value={{ isAuthenticated, setUser, user, login, logout }}
+    >
       {children}
     </AuthContext.Provider>
   );
-};
-
-// 3. Create a custom hook for easy access to the context in other components
-export const useAuth = () => {
-  return useContext(AuthContext);
 };
