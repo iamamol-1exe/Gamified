@@ -12003,3 +12003,586 @@
 {"level":"info","message":"SIGINT received, shutting down gracefully...","service":"backend-api","timestamp":"2025-09-21 11:47:32"}
 {"level":"info","message":"HTTP server closed","service":"backend-api","timestamp":"2025-09-21 11:47:32"}
 {"level":"info","message":"Redis disconnected successfully","service":"backend-api","timestamp":"2025-09-21 11:47:32"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:02:18"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:14:50"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:14:57"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:14:57"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:14:57"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:14:57"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:14:58"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:14:58"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:14:58"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:14:58"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:14:58"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:14:58"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:15:19"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:15:31"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:15:52"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:16:26"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:16:48"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:17:00"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:17:00"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:17:00"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:17:01"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:17:11"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:17:29"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:17:36"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:17:42"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:17:59"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:18:11"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:18:35"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:18:53"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:31:58"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:32:33"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:32:47"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:32:56"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:33:58"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:34:20"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:34:30"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:35:12"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:35:25"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:35:45"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:36:07"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:36:13"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:36:30"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:36:42"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:37:18"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:37:46"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:38:14"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 18:38:27"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:05:01"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:05:15"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:05:27"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:04"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:21"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:29"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:36"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:46"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:51"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:06:58"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:07:15"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:07:26"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:07:38"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:07:54"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:10:28"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:10:29"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:10:53"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:12:50"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:12:51"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:13:32"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:13:58"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:14:06"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:14:31"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:14:42"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"Redis ready to use","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"Redis connection established successfully","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"✅ Redis connected successfully","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-21 19:15:59"}
+{"level":"info","message":"SIGINT received, shutting down gracefully...","service":"backend-api","timestamp":"2025-09-21 19:17:18"}
+{"level":"info","message":"HTTP server closed","service":"backend-api","timestamp":"2025-09-21 19:17:18"}
+{"level":"info","message":"Redis disconnected successfully","service":"backend-api","timestamp":"2025-09-21 19:17:18"}
