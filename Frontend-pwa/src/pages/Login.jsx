@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Blob } from "../shapes/LoginShapes";
+
 import logo from "../assets/boy.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+// import Header from "../Components/Header";
+// import Footer from "../Components/Footer";
 
 // This is the corrected way to access environment variables in a Vite project
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -41,8 +41,8 @@ const Login = () => {
       });
       setMessage({ type: "success", text: response.data.message });
       console.log("Login success:", response.data);
-      localStorage.setItem("token",response.data.token);
-      localStorage.setItem("user",response.data.user); 
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("user", response.data.user);
       // In a real app, you would navigate to the dashboard here.
       navigate("/userpage");
     } catch (error) {
@@ -158,24 +158,15 @@ const Login = () => {
 
               <button
                 type="submit"
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className="bg-purple-400 text-white w-full   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
-=======
                 disabled={isLoading}
-                className="bg-purple-400 text-white w-full font-bold py-3 rounded-xl hover:bg-purple-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
->>>>>>> ef74179dd9804a6c31002636f17ec42dc31695ed
-=======
-                disabled={isLoading}
-                className="bg-purple-400 text-white w-full font-bold py-3 rounded-xl hover:bg-purple-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
->>>>>>> d97bbb49736ddcaa7b71f4a79328c468d9ac63d9
               >
                 {isLoading ? "Logging In..." : "Login"}
               </button>
             </form>
 
             <p className="text-center text-gray-600 mt-6">
-              Don't have an Account?{" "}
+              Dont have an Account?{" "}
               <Link
                 to="/registration"
                 className="text-purple-600 font-semibold hover:underline"
