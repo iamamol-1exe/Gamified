@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
-export interface IUser extends mongoose.Document {
+
+export interface Auser {
   fullname: string;
   email: string;
   password: string;
-  class: string;
-  rollNo: string;
-  schoolName: string;
   generateAuthToken(): string;
   hashPassword(password: string): Promise<string>;
   comparePassword(password: string): Promise<boolean>; 
