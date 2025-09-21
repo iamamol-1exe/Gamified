@@ -3,6 +3,7 @@ import adminModel from "../model/admin.model";
 import { createAdmin } from "../services/adminService";
 import { Auser } from "../types/adminTypes";
 import { addQuestionsService } from "../services/questionService";
+import blackListModel from "../model/blacklistToken.model";
 const { validationResult } = require("express-validator");
 
 export const registerAdmin = async (req: Request, res: Response) => {
@@ -109,4 +110,56 @@ export const addQuestionsController = async (req: Request, res: Response) => {
     console.error("Error while adding quetions", err);
     return res.status(401).json({ message: "Error while adding quetions" });
   }
+};
+
+export const logoutAdminController = async (req: Request, res: Response) => {
+  try {
+    const authHeader = req.headers.authorization;
+    const token =
+      req.cookies?.token ||
+      (authHeader?.startsWith("Bearer ") ? authHeader.split(" ")[1] : null);
+    if (!token) {
+      return res.status(400).json({ message: "No token provided" });
+    }
+
+    try {
+      // Blacklist the token if it doesn't already exist
+      const existingToken = await blackListModel.findOne({ token });
+
+      if (!existingToken) {
+        await blackListModel.create({ token });
+      }
+
+      // Clear the cookie with same options used during login
+      res.clearCookie("token", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        path: "/", // must match cookie set path
+      });
+
+      return res.status(200).json({ message: "User logged out successfully" });
+    } catch (dbError) {
+      console.error("Database error during logout:", dbError);
+
+      // Still clear cookie even if DB fails
+      res.clearCookie("token", {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        path: "/",
+      });
+
+      return res.status(200).json({
+        message: "User logged out but token may not be blacklisted",
+      });
+    }
+  } catch (error) {
+    console.error("Error during logout:", error);
+    return res.status(500).json({ message: "Logout failed" });
+  }
+};
+
+export const adminProfileController = async (req: Request, res: Response) => {
+  res.status(200).json({ user: req.user });
 };

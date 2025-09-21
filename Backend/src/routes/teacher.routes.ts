@@ -1,8 +1,11 @@
 import express from "express";
 import {
+  logoutTeacherController,
   registerTeacher,
   teacherLoginController,
+  teacherProfileController,
 } from "../controllers/teacher.controller";
+import { authenticateTeacher } from "../middleware/authMiddleware";
 
 const { body } = require("express-validator");
 
@@ -42,5 +45,9 @@ router.post(
   ],
   teacherLoginController
 );
+
+router.get("/logout", authenticateTeacher, logoutTeacherController);
+
+router.get("/profile", authenticateTeacher, teacherProfileController);
 
 export default router;

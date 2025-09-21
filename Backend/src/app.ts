@@ -5,6 +5,8 @@ import dotenv from "dotenv";
 import userRouter from "./routes/user.routes";
 import teacherRouter from "./routes/teacher.routes";
 import adminRouter from "./routes/admin.routes";
+import cookieParser from "cookie-parser";
+
 const app = express();
 
 const allowedDomains = [" ", "http://localhost:5173", "http://localhost:8080"];
@@ -13,6 +15,7 @@ app.use(
     origin: allowedDomains,
   })
 );
+app.use(cookieParser());
 
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 

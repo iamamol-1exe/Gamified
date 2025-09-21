@@ -1,9 +1,12 @@
 import express from "express";
 const { body } = require("express-validator");
 import {
+  logoutUserController,
   userController,
   userLoginController,
+  userProfileController,
 } from "../controllers/user.controller";
+import { authenticate } from "../middleware/authMiddleware";
 const router = express.Router();
 
 router.post(
@@ -49,5 +52,9 @@ router.post(
   ],
   userLoginController
 );
+
+router.get("/logout", authenticate, logoutUserController);
+
+router.get("/profile", authenticate, userProfileController);
 
 export default router;
