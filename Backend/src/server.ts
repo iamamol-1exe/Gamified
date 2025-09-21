@@ -1,8 +1,7 @@
 import app from "./app";
 import { config } from "./config";
 import { connectDatabase } from "./config/database";
-import { connectRedis, disconnectRedis } from "./config/redis";
-import { logger } from "./utils/logger";
+  import { logger } from "./utils/logger";
 
 async function startServer(): Promise<void> {
   try {
@@ -18,7 +17,7 @@ async function startServer(): Promise<void> {
       );
     });
 
-    // Connect to services in parallel with timeouts
+    // Connect to database with timeout
     const serviceConnections = await Promise.allSettled([
       Promise.race([
         connectDatabase(),
@@ -29,17 +28,11 @@ async function startServer(): Promise<void> {
           )
         ),
       ]),
-      Promise.race([
-        connectRedis(),
-        new Promise<never>((_, reject) =>
-          setTimeout(() => reject(new Error("Redis connection timeout")), 10000)
-        ),
-      ]),
     ]);
 
     // Log connection results
     serviceConnections.forEach((result, index) => {
-      const serviceName = index === 0 ? "Database" : "Redis";
+      const serviceName = "Database";
       if (result.status === "fulfilled") {
         logger.info(`✅ ${serviceName} connected successfully`);
       } else {
@@ -58,9 +51,8 @@ async function startServer(): Promise<void> {
       server.close(async () => {
         logger.info("HTTP server closed");
 
-        // Close database and redis connections
+        // Close database connections
         await Promise.allSettled([
-          disconnectRedis(),
           // Add database disconnect here if needed
         ]);
 

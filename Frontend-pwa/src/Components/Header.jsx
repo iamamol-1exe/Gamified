@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react"; // 1. Import useState from React
 import { BellIcon, MenuIcon } from "../shapes/DashBoardShapes";
+import NotificationDropdown from "./NotificationDropdown";
 
 const Header = ({ onMenuClick }) => {
+  // Dummy data for demonstration. In a real app, you'd fetch this.
+  const dummyNotifications = [
+    { id: 1, title: "New Assignment Posted", message: "Maths Chapter 5 homework is due Friday." },
+    { id: 2, title: "Grade Update", message: "Your Science quiz has been graded." },
+    { id: 3, title: "Event Reminder", message: "Parent-Teacher meeting tomorrow at 10 AM." },
+  ];
+
+  const [isNotificationOpen, setNotificationOpen] = useState(false);
+
+  const handleNotificationClick = () => {
+    setNotificationOpen(!isNotificationOpen);
+  };
+
   return (
     <header className="bg-[#D0B9FF] shadow-sm p-4 flex justify-between items-center">
       <div className="flex items-center">
@@ -43,11 +57,30 @@ const Header = ({ onMenuClick }) => {
           className="text-gray-600 hover:text-purple-600 font-semibold"
         >
           Logout
-        </a> */}
-        <button className="relative text-gray-600">
-          <BellIcon className="w-6 h-6" />
-          <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-purple-600 ring-2 ring-white"></span>
-        </button>
+        </a>
+
+        {/* --- Start Notification Section --- */}
+        {/* 2. Add a relative container for positioning the dropdown */}
+        <div className="relative">
+          {/* 3. Add onClick to the button */}
+          <button onClick={handleNotificationClick} className="relative text-gray-600">
+            <BellIcon className="w-6 h-6" />
+            {/* 4. Conditionally show the notification dot */}
+            {dummyNotifications.length > 0 && (
+              <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-purple-600 ring-2 ring-white"></span>
+            )}
+          </button>
+
+          {/* 5. Conditionally render the dropdown component */}
+          {isNotificationOpen && (
+            <NotificationDropdown 
+              notifications={dummyNotifications}
+              onClose={() => setNotificationOpen(false)}
+            />
+          )}
+        </div>
+        {/* --- End Notification Section --- */}
+
         <div className="flex items-center space-x-2">
           <img
             src="https://placehold.co/40x40/EFE2F9/7C3AED?text=U"
