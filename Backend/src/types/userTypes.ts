@@ -8,4 +8,5 @@ export interface IUser extends mongoose.Document {
   schoolName: string;
   generateAuthToken(): string;
   hashPassword(password: string): Promise<string>;
+  comparePassword(password: string): Promise<boolean>; 
 }

@@ -6,4 +6,5 @@ export interface Auser {
   password: string;
   generateAuthToken(): string;
   hashPassword(password: string): Promise<string>;
+  comparePassword(password: string): Promise<boolean>; 
 }

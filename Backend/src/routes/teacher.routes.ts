@@ -1,5 +1,8 @@
 import express from "express";
-import { registerTeacher } from "../controllers/teacher.controller";
+import {
+  registerTeacher,
+  teacherLoginController,
+} from "../controllers/teacher.controller";
 
 const { body } = require("express-validator");
 
@@ -27,6 +30,17 @@ router.post(
       .withMessage("userType must be at least 3 characters"),
   ],
   registerTeacher
+);
+router.post(
+  "/login",
+  [
+    body("email").isEmail().trim(),
+    body("password")
+      .trim()
+      .isLength({ min: 3 })
+      .withMessage("password must be at least 3 characters"),
+  ],
+  teacherLoginController
 );
 
 export default router;

@@ -47,4 +47,36 @@ export const userController = async (req: Request, res: Response) => {
   }
 };
 
-export const userLoginController = (req: Request, res: Response) => {};
+export const userLoginController = async (req: Request, res: Response) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(201).json({ error: errors });
+  }
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({ error: "All fields are required" });
+    }
+
+    // Find user by email only (not by password as it's hashed)
+    const user = (await userModel.findOne({ email: email })) as IUser;
+
+    if (!user) {
+      return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    // Compare the provided password with the hashed password in database
+    const isMatch = await user.comparePassword(password);
+
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    const token = user.generateAuthToken();
+    res.cookie("token", token);
+    res.status(200).json({ token, user });
+  } catch (err) {
+    console.error("Error while logging user", err);
+    return res.status(401).json({ message: "Error while logging user" });
+  }
+};
