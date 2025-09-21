@@ -1,17 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
+import App from "./App.jsx"
+import { AuthProvider } from "./context/AuthContext"; // 1. Import the AuthProvider
 import {
-  BrowserRouter,
   RouterProvider,
   Route,
   createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
-import { createRoutesFromElements } from "react-router-dom";
+
+// Import your page components
 import Layout from "./pages/Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx"; // Corrected casing from "login.jsx"
 import UserPage from "./pages/UserPage.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import LeaderBoardPage from "./pages/LeaderBoardPage.jsx";
@@ -32,6 +34,8 @@ const router = createBrowserRouter(
         <Route path="leaderboard" element={<LeaderBoardPage />} />
         <Route path="Analytics" element={<Analytics />} />
         <Route path="TeacherAnalytics" element={<TeacherAnalytics />} />
+        {/* I've added the missing Dashboard route based on our previous discussions */}
+        <Route path="dashboard" element={<Dashboard />} />
       </Route>
     </>
   )
@@ -39,9 +43,9 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <BrowserRouter>
-      <App />
-    </BrowserRouter> */}
-    <RouterProvider router={router} />
+    {/* 2. Wrap the RouterProvider with the AuthProvider */}
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );
