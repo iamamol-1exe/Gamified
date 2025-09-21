@@ -58,6 +58,12 @@ const Header = ({ onMenuClick }) => {
         >
           Logout
         </a>
+<<<<<<< HEAD
+        <button className="relative text-gray-600">
+          <BellIcon className="w-6 h-6" />
+          <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-purple-600 ring-2 ring-white"></span>
+        </button>
+=======
 
         {/* --- Start Notification Section --- */}
         {/* 2. Add a relative container for positioning the dropdown */}
@@ -81,6 +87,7 @@ const Header = ({ onMenuClick }) => {
         </div>
         {/* --- End Notification Section --- */}
 
+>>>>>>> d97bbb49736ddcaa7b71f4a79328c468d9ac63d9
         <div className="flex items-center space-x-2">
           <img
             src="https://placehold.co/40x40/EFE2F9/7C3AED?text=U"

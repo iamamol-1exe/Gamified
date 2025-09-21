@@ -4,24 +4,24 @@ import bcrypt from "bcryptjs";
 const teacherSchema = new mongoose.Schema({
   fullname: {
     type: String,
-    require: true,
+    required: true,
   },
   email: {
     type: String,
-    require: true,
+    required: true,
   },
   password: {
     type: String,
-    require: true,
+    required: true,
   },
   schoolName: {
     type: String,
-    require: true,
+    required: true,
   },
   userType: {
     type: String,
 
-    require: true,
+    requiredd: true,
   },
 });
 
