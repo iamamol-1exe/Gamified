@@ -20,7 +20,6 @@ const LeaderBoardPage = () => {
           {" "}
           {/* Adjust this value based on header height */}
           <Leaderboard />
-          <Footer />
         </div>
       </div>
     </div>

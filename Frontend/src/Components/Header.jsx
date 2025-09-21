@@ -2,13 +2,13 @@ import React from "react";
 import { BellIcon, MenuIcon } from "../shapes/DashBoardShapes";
 
 const Header = ({ onMenuClick }) => {
-  
   return (
     <header className="bg-[#D0B9FF] shadow-sm p-4 flex justify-between items-center">
       <div className="flex items-center">
-        <button
-          onClick={onMenuClick}
-          className="flex items-center space-x-2 mr-4 focus:outline-none"
+        {/* The entire div is now clickable */}
+        <div 
+          onClick={onMenuClick} 
+          className="flex items-center space-x-2 mr-4 cursor-pointer"
         >
           <div className="p-2 bg-purple-600 rounded-lg">
             <svg
@@ -29,7 +29,7 @@ const Header = ({ onMenuClick }) => {
           <h1 className="text-xl font-bold text-gray-800 hidden sm:block">
             STEM Quest
           </h1>
-        </button>
+        </div>
       </div>
       <div className="flex items-center space-x-6">
         <a
