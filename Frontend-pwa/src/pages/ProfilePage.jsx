@@ -1,0 +1,59 @@
+import React, { useState } from "react";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import SideBar from "../Components/SideBar";
+import ProfileInformation from "../Components/ProfileInformation";
+import SecurityAndAccount from "../Components/SecurityAndAccount";
+
+const ProfilePage = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  return (
+    <div className="flex min-h-screen bg-gray-100 font-sans">
+      {/* Sidebar - conditionally render with proper spacing */}
+      <div
+        className={`transition-all duration-300 ease-in-out ${
+          isSidebarOpen ? "w-64 flex-shrink-0" : "w-0"
+        }`}
+      >
+        {isSidebarOpen && <SideBar isOpen={isSidebarOpen} />}
+      </div>
+
+      {/* Main Content Area */}
+      <div
+        className={`flex flex-col flex-1 min-h-screen transition-all duration-300 ease-in-out ${
+          isSidebarOpen ? "ml-0" : "ml-0"
+        }`}
+      >
+        {/* Header */}
+        {/* <Header onMenuClick={toggleSidebar} /> */}
+
+        {/* Main Content with responsive layout */}
+        <main className="flex-1 p-6 bg-gray-50">
+          <div className="flex flex-col min-h-screen bg-gray-100 font-sans p-4 space-y-4">
+            <div className="flex flex-row min-h-screen rounded-2xl overflow-hidden shadow-2xl">
+              <SideBar isOpen={isSidebarOpen} />
+              <div className="flex flex-col flex-grow">
+                {/* <Header onMenuClick={toggleSidebar} /> */}
+                <main className="flex-grow p-6 flex space-x-6 bg-gray-50">
+                  <ProfileInformation />
+                  <SecurityAndAccount />
+                </main>
+              </div>
+            </div>
+            {/* Script tag is not needed here; Tailwind is configured in the project */}
+          </div>
+        </main>
+
+        {/* Footer */}
+        {/* <Footer /> */}
+      </div>
+    </div>
+  );
+};
+
+export default ProfilePage;
