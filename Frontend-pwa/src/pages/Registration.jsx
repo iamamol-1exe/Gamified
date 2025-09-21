@@ -3,8 +3,8 @@ import { Blob } from "../shapes/LoginShapes";
 import logo from "../assets/boy.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"; // Import axios for making HTTP requests
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+// import Header from "../Components/Header";
+// import Footer from "../Components/Footer";
 
 
 const Registration = () => {
