@@ -1,7 +1,7 @@
 import "./App.css";
 
 import LandingPage from "./pages/LandingPage";
-import Login from "./pages/login";
+// import Login from "./pages/login";
 import { Route, Routes } from "react-router-dom";
 import UserPage from "./pages/UserPage";
 import LeaderBoardPage from "./pages/LeaderBoardPage";
