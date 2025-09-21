@@ -12,7 +12,7 @@ export const ScienceIcon = () => (
       strokeLinejoin="round"
       d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 01-2.373-.823l-.11-."
     />
-    <path
+      <path
       strokeLinecap="round"
       strokeLinejoin="round"
       d="M7 4a1 1 0 011-1h8a1 1 0 011 1v2a1 1 0 01-1 1H8a1 1 0 01-1-1V4z"

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Blob } from "../shapes/LoginShapes";
 import logo from "../assets/boy.jpg";
-import { Link } from "react-router-dom";
-import Footer from "../Components/Footer";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios"; // Import axios for making HTTP requests
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+
 
 const Registration = () => {
   const [role, setRole] = useState("student"); // default role
@@ -15,32 +17,86 @@ const Registration = () => {
   const [std, setStd] = useState("");
   const [school, setSchool] = useState("");
 
-  const handleSubmit = (e) => {
+
+  const navigate = useNavigate();
+
+  // Define API endpoints for each user role
+  const API_ENDPOINTS = {
+    student: "http://localhost:4000/user/api/register",
+    teacher: "http://localhost:4000/teacher/api/register", // New endpoint for teachers
+    admin: "http://localhost:4000/admin/api//register",
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Role:", role);
+
+    let userData;
 
     if (role === "student") {
-      console.log(fullname, email, password, school, std, number, rollno);
+      // Only send student-specific data
+      userData = {
+        fullname,
+        email,
+        password,
+        school,
+        standard: std,
+        mobileNo: number,
+        rollno: rollno,
+        userType: role,
+      };
     } else if (role === "teacher") {
-      console.log(fullname, school, email, password);
+      // Only send teacher-specific data
+      userData = {
+        fullname,
+        email,
+        password,
+        school,
+        userType: role,
+      };
     } else if (role === "admin") {
-      console.log(fullname, email, password);
+      // Only send admin-specific data
+      userData = {
+        fullname,
+        email,
+        password,
+        userType: role,
+      };
     }
 
-    // Reset all fields
-    setRole("student"); // reset to default
-    setFullname("");
-    setEmail("");
-    setPassword("");
-    setNumber("");
-    setRollNo("");
-    setStd("");
-    setSchool("");
+    try {
+      // Use the API_ENDPOINTS object to select the correct URL based on the role
+      const response = await axios.post(API_ENDPOINTS[role], userData);
+      console.log("Registration successful:", response.data);
+      localStorage.setItem("user",response.data)    
+      alert("Registration Successful!");
+       // Redirect to the login page
+      navigate("/login"); 
+    } catch (error) {
+      console.error(
+        "Registration failed:",
+        error.response?.data || error.message
+      );
+      alert(
+        `Registration Failed: ${
+          error.response?.data?.message || "Something went wrong"
+        }`
+      );
+    } finally {
+      // Reset all form fields after the request is complete
+      setRole("student");
+      setFullname("");
+      setEmail("");
+      setPassword("");
+      setNumber("");
+      setRollNo("");
+      setStd("");
+      setSchool("");
+    }
   };
+  // ... (rest of the component)
 
   return (
     <div>
-      <Header/>
     <div className="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
       <main className="w-full max-w-5xl m-4 bg-white shadow-2xl rounded-3xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
         {/* Left Side */}
@@ -91,7 +147,7 @@ const Registration = () => {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Common Fields except password */}
+            {/* Common Fields */}
             <div>
               <label className="block text-sm font-medium text-gray-600 mb-1 text-left">
                 Full Name
@@ -118,7 +174,7 @@ const Registration = () => {
               />
             </div>
 
-            {/* Role-Specific Fields */}
+            {/* Role-Specific Fields for student */}
             {role === "student" && (
               <>
                 <div>
@@ -175,6 +231,7 @@ const Registration = () => {
               </>
             )}
 
+            {/* Role-Specific Fields for teacher */}
             {role === "teacher" && (
               <div>
                 <label className="block text-sm font-medium text-gray-600 mb-1 text-left">
@@ -190,7 +247,7 @@ const Registration = () => {
               </div>
             )}
 
-            {/* Password should always be LAST */}
+            {/* Password Field (always last) */}
             <div>
               <label className="block text-sm font-medium text-gray-600 mb-1 text-left">
                 Password
@@ -223,7 +280,6 @@ const Registration = () => {
         </div>
       </main>
     </div>
-    <Footer/>
     </div>
   );
 };
