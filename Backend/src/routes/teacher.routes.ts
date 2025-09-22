@@ -6,6 +6,7 @@ import {
   teacherProfileController,
 } from "../controllers/teacher.controller";
 import { authenticateTeacher } from "../middleware/authMiddleware";
+import { addQuestionsController } from "../controllers/admin.controller";
 
 const { body } = require("express-validator");
 
@@ -44,6 +45,35 @@ router.post(
       .withMessage("password must be at least 3 characters"),
   ],
   teacherLoginController
+);
+
+router.post(
+  "/addQuestions",
+  [
+    body("question")
+      .isLength({ min: 3 })
+      .withMessage("question must be at least 3 characters"),
+    body("option1")
+      .isLength({ min: 3 })
+      .withMessage("option must be at least 3 characters"),
+    body("option2")
+      .isLength({ min: 3 })
+      .withMessage("option must be at least 3 characters"),
+    body("option3")
+      .isLength({ min: 3 })
+      .withMessage("option must be at least 3 characters"),
+    body("option4")
+      .isLength({ min: 3 })
+      .withMessage("option must be at least 3 characters"),
+    body("subject")
+      .isLength({ min: 3 })
+      .withMessage("subject must be at least 3 characters"),
+    body("answer")
+      .isLength({ min: 3 })
+      .withMessage("subject must be at least 3 characters"),
+  ],
+  authenticateTeacher,
+  addQuestionsController
 );
 
 router.get("/logout", authenticateTeacher, logoutTeacherController);

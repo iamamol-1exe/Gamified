@@ -62,7 +62,7 @@ router.post(
       .isLength({ min: 3 })
       .withMessage("subject must be at least 3 characters"),
   ],
-  authenticate,
+  authenticateAdmin,
   addQuestionsController
 );
 

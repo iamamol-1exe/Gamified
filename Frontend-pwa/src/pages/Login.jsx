@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import logo from "../assets/boy.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../Context/AuthContext";
 
 // This is the corrected way to access environment variables in a Vite project
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -45,10 +45,13 @@ const Login = () => {
 
       // Use the login function from context instead of setUser directly
       setUser(userData);
+      localStorage.setItem("token", response.data.token);
       console.log("Login success:", user);
       // Navigate after state is updated
       setTimeout(() => {
-        navigate("/userpage");
+        role === "student"
+          ? navigate("/userpage")
+          : navigate("/teacherdashboard");
       }, 100);
     } catch (error) {
       const errorMsg =

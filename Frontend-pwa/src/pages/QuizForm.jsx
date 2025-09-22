@@ -1,25 +1,27 @@
-import React, { useState } from 'react';
+import axios from "axios";
+import React, { useState } from "react";
 
 const QuestionForm = () => {
+  const url = import.meta.env.VITE_ADD_QUESTIONS;
   const [formData, setFormData] = useState({
-    question: '',
-    option1: '',
-    option2: '',
-    option3: '',
-    option4: '',
-    subject: 'Science',
-    answer: '',
+    question: "",
+    option1: "",
+    option2: "",
+    option3: "",
+    option4: "",
+    subject: "Science",
+    answer: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Here you would typically send this data to your backend API.
     // For now, we'll log the JSON object to the console.
@@ -33,17 +35,38 @@ const QuestionForm = () => {
       answer: formData.answer,
     };
     console.log(JSON.stringify(questionObject, null, 2));
-    alert("Question submitted successfully! Check the console for the JSON data.");
+
+    try {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        alert("You need to login first");
+        return;
+      }
+      const response = await axios.post(url, questionObject, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
+      if (response) {
+        alert(
+          "Question submitted successfully! Check the console for the JSON data."
+        );
+      }
+    } catch (err) {
+      alert("Question is not submitted, check it properly");
+      console.log("Error while ading questions", err);
+    }
 
     // Reset the form after submission
     setFormData({
-      question: '',
-      option1: '',
-      option2: '',
-      option3: '',
-      option4: '',
-      subject: 'Science',
-      answer: '',
+      question: "",
+      option1: "",
+      option2: "",
+      option3: "",
+      option4: "",
+      subject: "Science",
+      answer: "",
     });
   };
 
@@ -55,7 +78,10 @@ const QuestionForm = () => {
         </h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="subject" className="block text-lg font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="subject"
+              className="block text-lg font-medium text-gray-700 mb-2"
+            >
               Subject
             </label>
             <select
@@ -73,12 +99,15 @@ const QuestionForm = () => {
           </div>
 
           <div>
-            <label htmlFor="question" className="block text-lg font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="question"
+              className="block text-lg font-medium text-gray-700 mb-2"
+            >
               Question
             </label>
             <input
               type="text"
-              placeholder='Which shape has 4 equal sides ?'
+              placeholder="Which shape has 4 equal sides ?"
               id="question"
               name="question"
               value={formData.question}
@@ -90,12 +119,15 @@ const QuestionForm = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="option1" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="option1"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Option 1
               </label>
               <input
                 type="text"
-                placeholder='Triangle'
+                placeholder="Triangle"
                 id="option1"
                 name="option1"
                 value={formData.option1}
@@ -105,11 +137,14 @@ const QuestionForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="option2" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="option2"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Option 2
               </label>
               <input
-              placeholder='Square'
+                placeholder="Square"
                 type="text"
                 id="option2"
                 name="option2"
@@ -120,12 +155,15 @@ const QuestionForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="option3" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="option3"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Option 3
               </label>
               <input
                 type="text"
-                placeholder='Rectangle'
+                placeholder="Rectangle"
                 id="option3"
                 name="option3"
                 value={formData.option3}
@@ -135,12 +173,15 @@ const QuestionForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="option4" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="option4"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Option 4
               </label>
               <input
                 type="text"
-                placeholder='Circle'
+                placeholder="Circle"
                 id="option4"
                 name="option4"
                 value={formData.option4}
@@ -150,14 +191,17 @@ const QuestionForm = () => {
               />
             </div>
           </div>
-          
+
           <div>
-            <label htmlFor="answer" className="block text-lg font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="answer"
+              className="block text-lg font-medium text-gray-700 mb-2"
+            >
               Correct Answer
             </label>
             <input
               type="text"
-              placeholder='Square'
+              placeholder="Square"
               id="answer"
               name="answer"
               value={formData.answer}

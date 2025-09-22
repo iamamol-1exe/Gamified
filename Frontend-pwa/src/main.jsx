@@ -27,6 +27,7 @@ import ScienceGamepage from "./pages/ScienceGamepage.jsx";
 import TechnologyGamepage from "./pages/TechnologyGamepage.jsx";
 import MathematicsGamepage from "./pages/MathematicsGamepage.jsx";
 import EngineeringGamepage from "./pages/EngineeringGamepage.jsx";
+import TeacherDashboardPage from "./pages/TeacherDashboardPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -56,6 +57,7 @@ const router = createBrowserRouter(
           path="userpage/Engineeringpage"
           element={<EngineeringGamepage />}
         />
+        <Route path="teacherdashboard" element={<TeacherDashboardPage />} />
       </Route>
     </>
   )
