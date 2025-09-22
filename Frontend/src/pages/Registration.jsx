@@ -67,7 +67,7 @@ const Registration = () => {
       // Use the API_ENDPOINTS object to select the correct URL based on the role
       const response = await axios.post(API_ENDPOINTS[role], userData);
       console.log("Registration successful:", response.data);
-      localStorage.setItem("user", response.data);
+      localStorage.setItem("user", JSON.stringify(response.data));
       // alert("Registration Successful!");
       // Redirect to the login page
       navigate("/login");
