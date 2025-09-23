@@ -73,8 +73,16 @@ export const addQuestionsController = async (req: Request, res: Response) => {
     return res.status(201).json({ error: errors });
   }
   try {
-    const { question, option1, option2, option4, option3, subject, answer } =
-      req.body;
+    const {
+      question,
+      option1,
+      option2,
+      option4,
+      option3,
+      subject,
+      answer,
+      standard,
+    } = req.body;
     // Check if all required fields are provided
     if (
       !question ||
@@ -83,7 +91,8 @@ export const addQuestionsController = async (req: Request, res: Response) => {
       !option4 ||
       !option3 ||
       !subject ||
-      !answer
+      !answer ||
+      !standard
     ) {
       return res
         .status(400)
@@ -97,7 +106,8 @@ export const addQuestionsController = async (req: Request, res: Response) => {
       option3,
       option4,
       subject,
-      answer
+      answer,
+      standard
     );
     if (!response) {
       return res

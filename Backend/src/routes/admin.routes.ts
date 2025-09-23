@@ -60,7 +60,10 @@ router.post(
       .withMessage("subject must be at least 3 characters"),
     body("answer")
       .isLength({ min: 3 })
-      .withMessage("subject must be at least 3 characters"),
+      .withMessage("answer must be at least 3 characters"),
+    body("standard")
+      .isLength({ min: 3 })
+      .withMessage("standard must be at least 3 characters"),
   ],
   authenticateAdmin,
   addQuestionsController

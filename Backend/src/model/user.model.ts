@@ -28,6 +28,10 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   points: {
+    totalPoints: {
+      type: Number,
+      default: 0,
+    },
     science: {
       type: Number,
       default: 0,

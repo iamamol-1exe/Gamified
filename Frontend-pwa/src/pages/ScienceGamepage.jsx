@@ -138,7 +138,7 @@ const ScienceGamepage = () => {
       <h1 className="text-3xl font-bold text-black mb-8">Science Games</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
         {games.map((game, index) => (
-          <GameCard key={index} {...game} />
+          <GameCard subject="science" key={index} {...game} />
         ))}
       </div>
     </div>

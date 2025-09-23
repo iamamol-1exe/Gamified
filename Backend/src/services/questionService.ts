@@ -8,9 +8,18 @@ export const addQuestionsService = async (
   option3: string,
   option4: string,
   subject: string,
-  answer: string
+  answer: string,
+  standard: string
 ) => {
-  if (!question || !option1 || !option2 || !option4 || !option3 || !subject) {
+  if (
+    !question ||
+    !option1 ||
+    !option2 ||
+    !option4 ||
+    !option3 ||
+    !subject ||
+    !standard
+  ) {
     throw new Error("all fields are required");
   }
   const response = questionModel.create({
@@ -21,6 +30,7 @@ export const addQuestionsService = async (
     option4: option4,
     subject: subject,
     answer: answer,
+    standard: standard,
   });
   return response;
 };

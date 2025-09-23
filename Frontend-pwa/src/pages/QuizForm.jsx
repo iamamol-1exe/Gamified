@@ -11,6 +11,7 @@ const QuestionForm = () => {
     option4: "",
     subject: "Science",
     answer: "",
+    standard: "",
   });
 
   const handleChange = (e) => {
@@ -33,6 +34,7 @@ const QuestionForm = () => {
       option4: formData.option4,
       subject: formData.subject,
       answer: formData.answer,
+      standard: formData.standard,
     };
     console.log(JSON.stringify(questionObject, null, 2));
 
@@ -67,6 +69,7 @@ const QuestionForm = () => {
       option4: "",
       subject: "Science",
       answer: "",
+      standard: "6th",
     });
   };
 
@@ -209,6 +212,29 @@ const QuestionForm = () => {
               required
               className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg p-3 bg-gray-100"
             />
+          </div>
+          <div>
+            <label
+              htmlFor="subject"
+              className="block text-lg font-medium text-gray-700 mb-2"
+            >
+              Standard
+            </label>
+            <select
+              id="standard"
+              name="standard"
+              value={formData.standard}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg p-3 bg-gray-100"
+            >
+              <option value="6th">6th</option>
+              <option value="7th">7th</option>
+              <option value="8th"> 8th</option>
+              <option value="9th"> 9th </option>
+              <option value="10th"> 10th </option>
+              <option value="11th"> 11th </option>
+              <option value="12th"> 12th </option>
+            </select>
           </div>
 
           <div className="flex justify-center mt-6">
