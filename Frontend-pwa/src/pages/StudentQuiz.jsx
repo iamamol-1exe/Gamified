@@ -22,7 +22,7 @@ const StudentQuiz = () => {
   const { quizData } = useContext(AuthContext);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(1 * 10); // 15 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(1 * 60); // 15 minutes in seconds
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [message, setMessage] = useState(null);
 
