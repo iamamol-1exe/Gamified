@@ -28,42 +28,57 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   points: {
+    totalPoints: {
+      type: Number,
+      default: 0,
+    },
     science: {
       type: Number,
+      default: 0,
     },
     technology: {
       type: Number,
+      default: 0,
     },
     enviroment: {
       type: Number,
+      default: 0,
     },
     math: {
       type: Number,
+      default: 0,
     },
   },
   bagdes: {
     type: Array,
+    default: [],
   },
   streaks: {
     testSloved: {
       science: {
         type: Number,
+        default: 0,
       },
       technology: {
         type: Number,
+        default: 0,
       },
       enviroment: {
         type: Number,
+        default: 0,
       },
       math: {
         type: Number,
+        default: 0,
       },
     },
     maxDays: {
       type: Number,
+      default: 0,
     },
     currentStreak: {
       type: Number,
+      default: 0,
     },
   },
   schoolName: {
@@ -71,7 +86,6 @@ const userSchema = new mongoose.Schema({
   },
   userType: {
     type: String,
-
     required: true,
   },
 });

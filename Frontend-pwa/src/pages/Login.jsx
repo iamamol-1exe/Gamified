@@ -1,27 +1,76 @@
-import React, { useState } from "react";
-import { Blob, GithubIcon, GoogleIcon } from "../shapes/LoginShapes";
+import { useContext, useState } from "react";
+
 import logo from "../assets/boy.jpg";
-import { Link } from "react-router-dom";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { AuthContext } from "../Context/AuthContext";
+
+// This is the corrected way to access environment variables in a Vite project
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 const Login = () => {
+  const [role, setRole] = useState("student");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState(null);
+  const { setUser, user } = useContext(AuthContext);
 
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+
+  const API_ENDPOINTS = {
+    student: `${API_BASE_URL}/user/api/login`,
+    teacher: `${API_BASE_URL}/teacher/api/login`,
+    admin: `${API_BASE_URL}/admin/api/login`,
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
     console.log(password);
-    setEmail("");
-    setPassword("");
+    console.log(email);
+
+    setIsLoading(true);
+    setMessage(null);
+
+    const endpoint = API_ENDPOINTS[role];
+
+    try {
+      const response = await axios.post(endpoint, {
+        email: email,
+        password: password,
+      });
+      setMessage({ type: "success", text: response.data.message });
+      console.log("Login success:", response.data);
+      const userData = response.data.user;
+
+      // Use the login function from context instead of setUser directly
+      setUser(userData);
+      localStorage.setItem("token", response.data.token);
+      console.log("Login success:", user);
+      // Navigate after state is updated
+      setTimeout(() => {
+        role === "student"
+          ? navigate("/userpage")
+          : navigate("/teacherdashboard");
+      }, 100);
+    } catch (error) {
+      const errorMsg =
+        error.response?.data?.message || "An unexpected error occurred.";
+      setMessage({ type: "error", text: errorMsg });
+      console.error("Login error:", error);
+    } finally {
+      setIsLoading(false);
+      setEmail("");
+      setPassword("");
+    }
   };
 
   return (
     <div>
-      <Header/>
+      {/* <Header /> */}
       <div className="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
         <main className="w-full max-w-5xl m-4 bg-white shadow-2xl rounded-3xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
-          {/* Left Side: Image and Decorative Background - Now visible on all screen sizes */}
+          {/* Left Side: Image and Decorative Background */}
           <div className="relative">
             <div
               className="absolute inset-0 bg-gray-200"
@@ -32,9 +81,9 @@ const Login = () => {
             ></div>
             <div className="relative w-full h-full flex items-center justify-center p-8">
               <div className="relative w-[450px] h-[450px]">
-                <Blob />
+                {/* Re-adding a placeholder for Blob to avoid import errors */}
+                <div className="absolute w-full h-full bg-purple-400 opacity-20 rounded-[40%] blur-3xl"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Using the user-provided image */}
                   <img
                     src={logo}
                     alt="Scientist doing an experiment"
@@ -48,29 +97,39 @@ const Login = () => {
           {/* Right Side: Form */}
           <div className="p-8 md:p-12 flex flex-col justify-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">
-              Create Your Account
+              Login to Your Account
             </h1>
 
-            <form className="space-y-6">
-              {/* <div>
-                <label
-                  htmlFor="fullName"
-                  className="block text-sm font-medium text-gray-600 mb-1  text-left"
+            {/* Horizontal Sliding Buttons */}
+            <div className="flex justify-center mb-6 bg-gray-200 rounded-xl p-1">
+              {["student", "teacher", "admin"].map((r) => (
+                <button
+                  key={r}
+                  onClick={() => setRole(r)}
+                  className={`flex-1 px-4 py-2 rounded-xl p-1 font-medium transition ${
+                    role === r
+                      ? "bg-purple-400 text-white shadow"
+                      : "text-gray-700 hover:bg-gray-300"
+                  }`}
                 >
-                  Full Name
-                </label>
-                <input
-                  value={Fullname}
-                  onChange={(e) => {
-                    setFullname(e.target.value);
-                  }}
-                  type="text"
-                  id="fullName"
-                  placeholder="Enter your Full Name here"
-                  className="w-full px-4 py-3 bg-gray-300 border-gray-300 placeholder:text-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
-                />
-              </div> */}
+                  {r.charAt(0).toUpperCase() + r.slice(1)}
+                </button>
+              ))}
+            </div>
 
+            {message && (
+              <div
+                className={`p-4 mb-4 text-center rounded-xl ${
+                  message.type === "success"
+                    ? "bg-green-100 text-green-700"
+                    : "bg-red-100 text-red-700"
+                }`}
+              >
+                {message.text}
+              </div>
+            )}
+
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="email"
@@ -80,13 +139,11 @@ const Login = () => {
                 </label>
                 <input
                   value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
+                  onChange={(e) => setEmail(e.target.value)}
                   type="email"
                   id="email"
                   placeholder="Enter your Email here"
-                  className="w-full px-4 py-3 bg-gray-300 border-gray-300 rounded-xl placeholder:text-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+                  className="w-full px-4 py-3 bg-gray-300 border-gray-300 rounded-xl placeholder:text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
                 />
               </div>
 
@@ -99,32 +156,28 @@ const Login = () => {
                 </label>
                 <input
                   value={password}
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
+                  onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   id="password"
                   placeholder="Enter your Password here"
-                  className="w-full px-4 py-3 bg-gray-300 border-gray-300 rounded-xl placeholder:text-gray-700  focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+                  className="w-full px-4 py-3 bg-gray-300 border-gray-300 rounded-xl placeholder:text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
                 />
               </div>
 
               <button
-                onClick={(e) => {
-                  handleSubmit(e);
-                }}
                 type="submit"
-                className="bg-purple-400 text-white w-full   font-bold py-3 rounded-xl hover:bg-[#D0B9FF] transition-colors duration-300"
+                disabled={isLoading}
+                className="bg-purple-400 text-white w-full font-bold py-3 rounded-xl hover:bg-purple-500 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Login
+                {isLoading ? "Logging In..." : "Login"}
               </button>
             </form>
 
             <p className="text-center text-gray-600 mt-6">
-              Don't have an Account?{" "}
+              Don&apos;t have an Account?{" "}
               <Link
                 to="/registration"
-                className="text-bg-[#D0B9FF] font-semibold hover:underline"
+                className="text-purple-600 font-semibold hover:underline"
               >
                 Register
               </Link>
@@ -132,7 +185,7 @@ const Login = () => {
           </div>
         </main>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

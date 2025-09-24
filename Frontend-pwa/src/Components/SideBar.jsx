@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 import {
   AreaChartIcon,
   BarChart3Icon,
@@ -11,6 +14,14 @@ import {
 } from "../shapes/DashBoardShapes";
 
 const Sidebar = ({ isOpen }) => {
+  const { logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
+
   const navItems = [
     { icon: HomeIcon, label: "Home", active: true },
     { icon: BarChart3Icon, label: "Leaderboard" },
@@ -21,7 +32,7 @@ const Sidebar = ({ isOpen }) => {
   ];
 
   const bottomNavItems = [
-    { icon: LogOutIcon, label: "Logout" },
+    { icon: LogOutIcon, label: "Logout", onClick: handleLogout },
     { icon: SettingsIcon, label: "Settings" },
   ];
 
@@ -83,6 +94,7 @@ const Sidebar = ({ isOpen }) => {
           <a
             key={index}
             href="#"
+            onClick={item.onClick}
             className="flex items-center space-x-3 px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white"
           >
             <item.icon className="w-5 h-5" />

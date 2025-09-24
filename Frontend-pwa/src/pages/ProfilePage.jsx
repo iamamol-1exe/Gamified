@@ -1,16 +1,14 @@
-import React, { useState } from "react";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import { useContext, useState } from "react";
+
 import SideBar from "../Components/SideBar";
 import ProfileInformation from "../Components/ProfileInformation";
-import SecurityAndAccount from "../Components/SecurityAndAccount";
+import { AuthContext } from "../context/AuthContext";
 
 const ProfilePage = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  const { user } = useContext(AuthContext);
+  console.log(user);
 
   return (
     <div className="flex min-h-screen bg-gray-100 font-sans">
@@ -39,9 +37,8 @@ const ProfilePage = () => {
               <SideBar isOpen={isSidebarOpen} />
               <div className="flex flex-col flex-grow">
                 {/* <Header onMenuClick={toggleSidebar} /> */}
-                <main className="flex-grow p-6 flex space-x-6 bg-gray-50">
+                <main className="flex-grow p-6 flex justify-center bg-gray-50">
                   <ProfileInformation />
-                  <SecurityAndAccount />
                 </main>
               </div>
             </div>

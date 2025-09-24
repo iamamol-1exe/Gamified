@@ -29,6 +29,10 @@ const questionShcema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  standard: {
+    type: String,
+    required: true,
+  },
 });
 
 const questionModel = mongoose.model("questions", questionShcema);

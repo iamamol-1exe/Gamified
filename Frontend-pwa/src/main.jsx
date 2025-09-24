@@ -1,24 +1,33 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App.jsx";
+import "./App.css";
+import { AuthProvider } from "./Context/AuthContext";
 import {
-  BrowserRouter,
   RouterProvider,
   Route,
   createBrowserRouter,
+  createRoutesFromElements,
 } from "react-router-dom";
-import { createRoutesFromElements } from "react-router-dom";
+
+// Import your page components
 import Layout from "./pages/Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import UserPage from "./pages/UserPage.jsx";
-import Dashboard from "./pages/Dashboard.jsx";
 import LeaderBoardPage from "./pages/LeaderBoardPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 import Registration from "./pages/Registration.jsx";
 import Analytics from "./pages/Analytics.jsx";
 import TeacherAnalytics from "./pages/TeacherAnalytics.jsx";
+import StudentPerformance from "./pages/StudentPerformance.jsx";
+import QuizForm from "./pages/QuizForm.jsx";
+import StudentQuiz from "./pages/StudentQuiz.jsx";
+import ScienceGamepage from "./pages/ScienceGamepage.jsx";
+import TechnologyGamepage from "./pages/TechnologyGamepage.jsx";
+import MathematicsGamepage from "./pages/MathematicsGamepage.jsx";
+import EngineeringGamepage from "./pages/EngineeringGamepage.jsx";
+import TeacherDashboardPage from "./pages/TeacherDashboardPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +41,23 @@ const router = createBrowserRouter(
         <Route path="leaderboard" element={<LeaderBoardPage />} />
         <Route path="Analytics" element={<Analytics />} />
         <Route path="TeacherAnalytics" element={<TeacherAnalytics />} />
+        <Route path="studentperformance" element={<StudentPerformance />} />
+        <Route path="quizform" element={<QuizForm />} />
+        <Route path="studentquiz" element={<StudentQuiz />} />
+        <Route path="userpage/Sciencepage" element={<ScienceGamepage />} />
+        <Route
+          path="userpage/Technologypage"
+          element={<TechnologyGamepage />}
+        />
+        <Route
+          path="userpage/Mathematicspage"
+          element={<MathematicsGamepage />}
+        />
+        <Route
+          path="userpage/Engineeringpage"
+          element={<EngineeringGamepage />}
+        />
+        <Route path="teacherdashboard" element={<TeacherDashboardPage />} />
       </Route>
     </>
   )
@@ -39,9 +65,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    {/* <BrowserRouter>
-      <App />
-    </BrowserRouter> */}
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

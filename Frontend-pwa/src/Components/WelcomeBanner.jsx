@@ -1,12 +1,15 @@
-import React from "react";
+import { useContext } from "react";
 import kids from "../assets/kids.jpg";
+import { AuthContext } from "../context/AuthContext";
 
 const WelcomeBanner = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="md:flex items-center justify-between space-y-4 md:space-y-0">
       <div className="flex-1">
         <h2 className="text-3xl font-bold text-gray-800">
-          Welcome to STEM Quest
+          Welcome {user ? user.fullname : "to STEM Quest"}
         </h2>
         <p className="text-gray-500 mt-2">
           Learn, Play, and Grow with Interactive STEM Education

@@ -3,8 +3,8 @@ import { Blob } from "../shapes/LoginShapes";
 import logo from "../assets/boy.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios"; // Import axios for making HTTP requests
-// import Header from "../Components/Header";
-// import Footer from "../Components/Footer";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 const Registration = () => {
   const [role, setRole] = useState("student"); // default role
@@ -19,10 +19,12 @@ const Registration = () => {
   const navigate = useNavigate();
 
   // Define API endpoints for each user role
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const API_ENDPOINTS = {
-    student: "http://localhost:4000/user/api/register",
-    teacher: "http://localhost:4000/teacher/api/register", // New endpoint for teachers
-    admin: "http://localhost:4000/admin/api//register",
+    student: `${API_BASE_URL}/user/api/register`,
+    teacher: `${API_BASE_URL}/teacher/api/register`,
+    admin: `${API_BASE_URL}/admin/api/register`,
   };
 
   const handleSubmit = async (e) => {
@@ -66,7 +68,7 @@ const Registration = () => {
       const response = await axios.post(API_ENDPOINTS[role], userData);
       console.log("Registration successful:", response.data);
       localStorage.setItem("user", JSON.stringify(response.data));
-      alert("Registration Successful!");
+      // alert("Registration Successful!");
       // Redirect to the login page
       navigate("/login");
     } catch (error) {
@@ -95,6 +97,7 @@ const Registration = () => {
 
   return (
     <div>
+      <Header />
       <div className="bg-gray-100 flex items-center justify-center min-h-screen font-sans">
         <main className="w-full max-w-5xl m-4 bg-white shadow-2xl rounded-3xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
           {/* Left Side */}
@@ -278,6 +281,7 @@ const Registration = () => {
           </div>
         </main>
       </div>
+      <Footer />
     </div>
   );
 };

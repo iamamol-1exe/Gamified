@@ -1,9 +1,12 @@
 import express from "express";
 const { body } = require("express-validator");
 import {
+  logoutUserController,
   userController,
   userLoginController,
+  userProfileController,
 } from "../controllers/user.controller";
+import { authenticate } from "../middleware/authMiddleware";
 const router = express.Router();
 
 router.post(
@@ -20,7 +23,7 @@ router.post(
       .withMessage("password must be at least 3 characters"),
     body("standard")
       .trim()
-      .isLength({ min: 3 })
+      .isLength({ min: 1 })
       .withMessage("standard must be at least 3 characters"),
     body("school")
       .trim()
@@ -28,8 +31,8 @@ router.post(
       .withMessage("school must be at least 3 characters"),
     body("rollno")
       .trim()
-      .isLength({ min: 3 })
-      .withMessage("rollno must be at least 3 characters"),
+      .isLength({ min: 1 })
+      .withMessage("rollno must be at least 1 characters"),
     body("userType")
       .trim()
       .isLength({ min: 3 })
@@ -49,5 +52,9 @@ router.post(
   ],
   userLoginController
 );
+
+router.get("/logout", authenticate, logoutUserController);
+
+router.get("/profile", authenticate, userProfileController);
 
 export default router;
