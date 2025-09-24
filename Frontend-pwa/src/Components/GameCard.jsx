@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import StarIcon from "../shapes/StarIcon";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
@@ -20,7 +20,8 @@ const GameCard = ({
   subject,
 }) => {
   const { user, getQuestions } = useContext(AuthContext);
-  const standard = user.class;
+  const standard = user?.class;
+  const navigate = useNavigate();
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-sm mx-auto flex flex-col">
@@ -40,8 +41,10 @@ const GameCard = ({
           <span className="font-bold text-indigo-500">+{points} points</span>
         </div>
         <Link
-          onClick={() => {
-            getQuestions(standard, subject);
+          onClick={async () => {
+            const data = await getQuestions(standard, subject);
+            if (!data) navigate("/login");
+            console.log(data);
           }}
           to="/studentquiz"
           className="w-full bg-purple-300 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"

@@ -40,7 +40,7 @@ const userSchema = new mongoose.Schema({
       type: Number,
       default: 0,
     },
-    enviroment: {
+    environment: {
       type: Number,
       default: 0,
     },
@@ -49,12 +49,12 @@ const userSchema = new mongoose.Schema({
       default: 0,
     },
   },
-  bagdes: {
+  badges: {
     type: Array,
     default: [],
   },
   streaks: {
-    testSloved: {
+    testSolved: {
       science: {
         type: Number,
         default: 0,
@@ -63,7 +63,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0,
       },
-      enviroment: {
+      environment: {
         type: Number,
         default: 0,
       },

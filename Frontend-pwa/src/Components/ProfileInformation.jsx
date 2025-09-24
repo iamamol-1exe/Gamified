@@ -1,8 +1,38 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 const ProfileInformation = () => {
-  const { user } = useContext(AuthContext);
+  const { user, setUser } = useContext(AuthContext);
+  const [userProfile, setUserProfile] = useState(user);
+
+  // Update local state when user context changes
+  useEffect(() => {
+    setUserProfile(user);
+  }, [user]);
+
+  // Listen for storage changes from other tabs/windows only
+  useEffect(() => {
+    const handleStorageChange = () => {
+      try {
+        const savedUser = localStorage.getItem("user");
+        if (savedUser) {
+          const parsedUser = JSON.parse(savedUser);
+          if (JSON.stringify(parsedUser) !== JSON.stringify(user)) {
+            setUser(parsedUser);
+          }
+        }
+      } catch (error) {
+        console.error("Error syncing user data:", error);
+      }
+    };
+
+    // Listen for storage changes from other tabs/windows
+    window.addEventListener("storage", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+    };
+  }, [user, setUser]);
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-md space-y-6 w-full max-w-4xl mx-auto">
@@ -28,7 +58,7 @@ const ProfileInformation = () => {
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
           <div className="w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-white text-2xl font-bold">
-            {user ? user.fullname?.charAt(0).toUpperCase() : "U"}
+            {userProfile ? userProfile.fullname?.charAt(0).toUpperCase() : "U"}
           </div>
           <div className="absolute bottom-0 right-0 p-1 bg-white rounded-full shadow-md">
             <svg
@@ -49,10 +79,10 @@ const ProfileInformation = () => {
         </div>
         <div className="text-center">
           <p className="text-xl font-bold">
-            {user ? user.fullname : "Loading..."}
+            {userProfile ? userProfile.fullname : "Loading..."}
           </p>
           <p className="text-gray-500">
-            @{user ? user.fullname?.split(" ")[0] : "User"}
+            @{userProfile ? userProfile.fullname?.split(" ")[0] : "User"}
           </p>
         </div>
       </div>
@@ -81,7 +111,7 @@ const ProfileInformation = () => {
               <div>
                 <p className="text-sm text-gray-500">Email</p>
                 <p className="font-medium">
-                  {user ? user.email : "email@example.com"}
+                  {userProfile ? userProfile.email : "email@example.com"}
                 </p>
               </div>
             </div>
@@ -102,7 +132,7 @@ const ProfileInformation = () => {
               <div>
                 <p className="text-sm text-gray-500">School</p>
                 <p className="font-medium">
-                  {user ? user.schoolName : "School Name"}
+                  {userProfile ? userProfile.schoolName : "School Name"}
                 </p>
               </div>
             </div>
@@ -122,7 +152,9 @@ const ProfileInformation = () => {
               </svg>
               <div>
                 <p className="text-sm text-gray-500">Class</p>
-                <p className="font-medium">{user ? user.class : "Class"}</p>
+                <p className="font-medium">
+                  {userProfile ? userProfile.class : "Class"}
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
@@ -141,7 +173,9 @@ const ProfileInformation = () => {
               </svg>
               <div>
                 <p className="text-sm text-gray-500">Roll Number</p>
-                <p className="font-medium">{user ? user.rollNo : "Roll No."}</p>
+                <p className="font-medium">
+                  {userProfile ? userProfile.rollNo : "Roll No."}
+                </p>
               </div>
             </div>
           </div>
@@ -155,32 +189,36 @@ const ProfileInformation = () => {
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
             <div className="text-center mb-3">
               <p className="text-2xl font-bold text-purple-600">
-                {user?.points?.totalPoints || 0}
+                {userProfile?.points?.totalPoints || 0}
               </p>
               <p className="text-sm text-gray-600">Total Points</p>
             </div>
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div className="text-center">
                 <p className="font-semibold text-blue-600">
-                  {user?.points?.science || 0}
+                  {userProfile?.points?.science || 0}
                 </p>
                 <p className="text-gray-600">Science</p>
               </div>
               <div className="text-center">
                 <p className="font-semibold text-green-600">
-                  {user?.points?.math || 0}
+                  {userProfile?.points?.math || 0}
                 </p>
                 <p className="text-gray-600">Math</p>
               </div>
               <div className="text-center">
                 <p className="font-semibold text-orange-600">
-                  {user?.points?.technology || 0}
+                  {userProfile &&
+                  userProfile.points &&
+                  userProfile.points.technology !== undefined
+                    ? userProfile.points.technology
+                    : 0}
                 </p>
                 <p className="text-gray-600">Technology</p>
               </div>
               <div className="text-center">
                 <p className="font-semibold text-emerald-600">
-                  {user?.points?.enviroment || 0}
+                  {userProfile?.points?.environment || 0}
                 </p>
                 <p className="text-gray-600">Environment</p>
               </div>
@@ -212,7 +250,7 @@ const ProfileInformation = () => {
               </svg>
               <div>
                 <p className="text-lg font-bold text-orange-600">
-                  {user?.streaks?.currentStreak || 0}
+                  {userProfile?.streaks?.currentStreak || 0}
                 </p>
                 <p className="text-sm text-gray-600">Current Streak</p>
               </div>
@@ -235,7 +273,7 @@ const ProfileInformation = () => {
               </svg>
               <div>
                 <p className="text-lg font-bold text-red-600">
-                  {user?.streaks?.maxDays || 0}
+                  {userProfile?.streaks?.maxDays || 0}
                 </p>
                 <p className="text-sm text-gray-600">Max Streak</p>
               </div>
@@ -249,25 +287,29 @@ const ProfileInformation = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
             <div className="text-center">
               <p className="font-semibold text-blue-600">
-                {user?.streaks?.testSloved?.science || 0}
+                {userProfile?.streaks?.testSolved?.science || 0}
               </p>
               <p className="text-gray-600">Science</p>
             </div>
             <div className="text-center">
               <p className="font-semibold text-green-600">
-                {user?.streaks?.testSloved?.math || 0}
+                {userProfile?.streaks?.testSolved?.math || 0}
               </p>
               <p className="text-gray-600">Math</p>
             </div>
             <div className="text-center">
               <p className="font-semibold text-orange-600">
-                {user?.streaks?.testSloved?.technology || 0}
+                {userProfile &&
+                userProfile.streaks &&
+                userProfile.streaks.testSolved?.technology !== undefined
+                  ? userProfile.streaks.testSolved?.technology
+                  : 0}
               </p>
               <p className="text-gray-600">Technology</p>
             </div>
             <div className="text-center">
               <p className="font-semibold text-emerald-600">
-                {user?.streaks?.testSloved?.enviroment || 0}
+                {userProfile?.streaks?.testSolved?.environment || 0}
               </p>
               <p className="text-gray-600">Environment</p>
             </div>
@@ -281,9 +323,9 @@ const ProfileInformation = () => {
           Achievements & Badges
         </h3>
         <div className="bg-gray-50 p-4 rounded-lg">
-          {user?.bagdes && user.bagdes.length > 0 ? (
+          {userProfile?.badges && userProfile.badges.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {user.bagdes.map((badge, index) => (
+              {userProfile.badges.map((badge, index) => (
                 <div
                   key={index}
                   className="text-center p-3 bg-white rounded-lg shadow-sm"

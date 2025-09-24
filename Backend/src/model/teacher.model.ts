@@ -20,8 +20,7 @@ const teacherSchema = new mongoose.Schema({
   },
   userType: {
     type: String,
-
-    requiredd: true,
+    required: true,
   },
 });
 

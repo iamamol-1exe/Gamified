@@ -3,6 +3,7 @@ const { body } = require("express-validator");
 import {
   getQuestionsController,
   logoutUserController,
+  updateUserController,
   userController,
   userLoginController,
   userProfileController,
@@ -71,7 +72,9 @@ router.post(
       .withMessage("password must be at least 3 characters"),
   ],
   authenticate,
-  getQuestionsController  
+  getQuestionsController
 );
+
+router.post("/update", authenticate, updateUserController);
 
 export default router;

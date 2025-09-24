@@ -112,13 +112,13 @@ export const addQuestionsController = async (req: Request, res: Response) => {
     if (!response) {
       return res
         .status(4001)
-        .json({ message: "error occuring in the adding user" });
+        .json({ message: "error occurring in the adding user" });
     }
 
     return res.status(200).json({ success: true, question: response });
   } catch (err) {
-    console.error("Error while adding quetions", err);
-    return res.status(401).json({ message: "Error while adding quetions" });
+    console.error("Error while adding questions", err);
+    return res.status(401).json({ message: "Error while adding questions" });
   }
 };
 

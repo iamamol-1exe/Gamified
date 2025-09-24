@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // 1. Create the context
 export const AuthContext = createContext(null);
@@ -66,6 +67,53 @@ export const AuthProvider = ({ children }) => {
     }
   }, [user]);
 
+  // Sync user data with server every 3 seconds
+  useEffect(() => {
+    const syncUserData = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const url = import.meta.env.VITE_USER_PROFILE_URL;
+
+        if (!url || !token) {
+          return;
+        }
+
+        const response = await axios.get(url, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        });
+
+        if (response.data && response.data.user) {
+          const serverUser = response.data.user;
+          if (JSON.stringify(serverUser) !== JSON.stringify(user)) {
+            setUser(serverUser);
+            console.log("User data synchronized with server");
+          }
+        }
+      } catch (error) {
+        // Silently handle errors to avoid spamming console
+        if (error.response?.status !== 401) {
+          console.error("Error synchronizing user data:", error.message);
+        }
+      }
+    };
+
+    // Only start syncing if user is logged in
+    if (user) {
+      // Sync immediately on mount
+      syncUserData();
+
+      // Then sync every 3 seconds
+      const syncInterval = setInterval(syncUserData, 3000);
+
+      return () => {
+        clearInterval(syncInterval);
+      };
+    }
+  }, [user]);
+
   const login = (userData) => {
     setUser(userData);
     console.log("User logged in successfully");
@@ -99,7 +147,7 @@ export const AuthProvider = ({ children }) => {
       );
       console.log(response);
       if (!response) {
-        alert("Questions is not availble");
+        alert("Questions are not available");
         throw new Error("No response received");
       }
 
@@ -133,6 +181,7 @@ export const AuthProvider = ({ children }) => {
         login,
         logout,
         quizData,
+        setQuizData,
         getQuestions,
       }}
     >

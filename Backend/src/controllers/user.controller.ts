@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import userModel from "../model/user.model";
 
 import { createUser } from "../services/userService";
-import { IUser } from "../types/userTypes";
+import { IUser, IUserType } from "../types/userTypes";
 import blackListModel from "../model/blacklistToken.model";
 import questionModel from "../model/questions.model";
 import { parseMultipleQuestions } from "../utils/parseQuestions";
@@ -159,5 +159,33 @@ export const getQuestionsController = async (req: Request, res: Response) => {
   } catch (err) {
     console.error("Error while getting questions", err);
     return res.status(401).json({ message: "Error while getting questions" });
+  }
+};
+
+export const updateUserController = async (req: Request, res: Response) => {
+  try {
+    const userData: IUserType = req.body;
+    if (!userData || !userData._id) {
+      return res.status(400).json({ message: "Invalid user data provided" });
+    }
+
+    // Use proper findByIdAndUpdate with options
+    const updatedUser = await userModel.findByIdAndUpdate(
+      userData._id,
+      { $set: userData },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    return res.status(200).json({
+      message: "User updated successfully",
+      user: updatedUser,
+    });
+  } catch (err) {
+    console.error("Error while updating the User", err);
+    return res.status(401).json({ message: "Error while updating the User" });
   }
 };
