@@ -47,7 +47,7 @@ const GameCard = ({
             console.log(data);
           }}
           to="/studentquiz"
-          className="w-full bg-purple-300 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
+          className="w-full bg-purple-700 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
         >
           Play Now
         </Link>
