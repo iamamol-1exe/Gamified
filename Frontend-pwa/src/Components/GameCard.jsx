@@ -64,8 +64,16 @@ const GameCard = ({
         </div>
         <Link
           onClick={async () => {
+            const standard = user?.class;
+            if (!user) {
+              navigate("/login");
+              return;
+            }
             const data = await getQuestions(standard, subject);
-            if (!data) navigate("/login");
+            if (!data) {
+              console.log("Failed to get quiz data.");
+              return;
+            }
             console.log(data);
           }}
           to="/studentquiz"
