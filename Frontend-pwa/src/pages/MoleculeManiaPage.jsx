@@ -53,19 +53,45 @@ class GameScene extends Phaser.Scene {
         });
     }
 
-    initUI() {
-        this.add.text(400, 40, 'Molecule Mania', { fontSize: '36px', fill: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
-        this.add.text(400, 75, 'Drag elements into the zone to form compounds!', { fontSize: '18px', fill: '#ffffff' }).setOrigin(0.5);
-        this.scoreText = this.add.text(650, 40, 'Score: 0', { fontSize: '24px', fill: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
-        const combineBtn = this.add.graphics({ fillStyle: { color: 0x4CAF50 } }).fillRoundedRect(300, 520, 200, 50, 16).setInteractive(new Phaser.Geom.Rectangle(300, 520, 200, 50), Phaser.Geom.Rectangle.Contains);
-        this.add.text(400, 545, 'Combine!', { fontSize: '24px', fill: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
-        combineBtn.on('pointerdown', () => this.verifyCombination());
-        const resetBtn = this.add.graphics({ fillStyle: { color: 0xf44336 } }).fillRoundedRect(20, 520, 150, 50, 16).setInteractive(new Phaser.Geom.Rectangle(20, 520, 150, 50), Phaser.Geom.Rectangle.Contains);
-        this.add.text(95, 545, 'Reset', { fontSize: '24px', fill: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
-        resetBtn.on('pointerdown', () => this.clearCombinationZone());
-        this.infoBox = this.add.graphics({fillStyle: {color: 0xffffff, alpha: 0.8}}).fillRoundedRect(200, 200, 400, 200, 15).setVisible(false);
-        this.infoText = this.add.text(400, 300, '', { fontSize: '20px', fill: '#333', align: 'center', wordWrap: { width: 380 }}).setOrigin(0.5).setVisible(false);
-    }
+initUI() {
+    this.add.text(400, 40, 'Molecule Mania', { fontSize: '36px', fill: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
+    this.add.text(400, 75, 'Drag elements into the zone to form compounds!', { fontSize: '18px', fill: '#ffffff' }).setOrigin(0.5);
+    this.scoreText = this.add.text(650, 40, 'Score: 0', { fontSize: '24px', fill: '#ffffff', fontStyle: 'bold' }).setOrigin(0.5);
+
+    // --- Buttons (Higher Depth) ---
+    // Buttons get a depth of 20, so they are always on top.
+    const combineBtn = this.add.graphics({ fillStyle: { color: 0x4CAF50 } })
+        .fillRoundedRect(300, 520, 200, 50, 16)
+        .setInteractive(new Phaser.Geom.Rectangle(300, 520, 200, 50), Phaser.Geom.Rectangle.Contains)
+        .setDepth(20); // <-- Set depth
+
+    const combineText = this.add.text(400, 545, 'Combine!', { fontSize: '24px', fill: '#ffffff', fontStyle: 'bold' })
+        .setOrigin(0.5)
+        .setDepth(20); // <-- Set depth
+    combineBtn.on('pointerdown', () => this.verifyCombination());
+
+    const resetBtn = this.add.graphics({ fillStyle: { color: 0xf44336 } })
+        .fillRoundedRect(20, 520, 150, 50, 16)
+        .setInteractive(new Phaser.Geom.Rectangle(20, 520, 150, 50), Phaser.Geom.Rectangle.Contains)
+        .setDepth(20); // <-- Set depth
+
+    const resetText = this.add.text(95, 545, 'Reset', { fontSize: '24px', fill: '#ffffff', fontStyle: 'bold' })
+        .setOrigin(0.5)
+        .setDepth(20); // <-- Set depth
+    resetBtn.on('pointerdown', () => this.clearCombinationZone());
+    
+    // --- Info Box (Lower Depth) ---
+    // The info box gets a depth of 10, so it appears below the buttons.
+    this.infoBox = this.add.graphics({fillStyle: {color: 0xffffff, alpha: 0.8}})
+        .fillRoundedRect(200, 200, 400, 200, 15)
+        .setDepth(10) // <-- Set depth
+        .setVisible(false);
+
+    this.infoText = this.add.text(400, 300, '', { fontSize: '20px', fill: '#333', align: 'center', wordWrap: { width: 380 }})
+        .setOrigin(0.5)
+        .setDepth(10) // <-- Set depth
+        .setVisible(false);
+}
 
     initZones() {
         this.add.graphics({ fillStyle: { color: 0x000000, alpha: 0.1 } }).fillRoundedRect(20, 120, 150, 380, 10);

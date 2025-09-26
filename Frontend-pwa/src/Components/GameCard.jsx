@@ -20,14 +20,14 @@ const GameCard = ({
   subject,
   route,
 }) => {
-  const { user, getQuestions } = useContext(AuthContext);
+  const { user, getQuestions, setQuizData } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // 1. Check if this specific card is the MCQ quiz
   const isQuiz = title === "Solve MCQ";
 
   const handlePlayClick = async () => {
-    // First, always check if the user is logged in
+    setQuizData([]);
     if (!user) {
       navigate("/login");
       return;
@@ -39,7 +39,7 @@ const GameCard = ({
       console.log("Fetching quiz questions...");
       const standard = user?.class;
       const data = await getQuestions(standard, subject);
-      
+
       if (data) {
         console.log("Quiz data fetched, navigating to /studentquiz");
         navigate("/studentquiz");
@@ -71,7 +71,7 @@ const GameCard = ({
           </div>
           <span className="font-bold text-indigo-500">+{points} points</span>
         </div>
-        
+
         {/* 3. Replaced <Link> with a <button> that uses our smart handler */}
         <button
           onClick={handlePlayClick}

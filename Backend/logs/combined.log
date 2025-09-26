@@ -13913,3 +13913,10 @@
 {"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-26 22:08:44"}
 {"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-26 22:08:44"}
 {"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-26 22:08:44"}
+{"level":"info","message":"SIGINT received, shutting down gracefully...","service":"backend-api","timestamp":"2025-09-26 23:43:17"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-26 23:45:33"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-26 23:45:33"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-26 23:45:33"}
+{"level":"warn","message":"⚠️ Database connection failed: Database connection timeout","service":"backend-api","timestamp":"2025-09-26 23:45:48"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-26 23:45:48"}
+{"level":"warn","message":"MongoDB disconnected","service":"backend-api","timestamp":"2025-09-26 23:46:03"}
