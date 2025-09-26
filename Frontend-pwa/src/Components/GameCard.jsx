@@ -19,7 +19,7 @@ const GameCard = ({
   imageComponent,
   subject,
 }) => {
-  const { user, getQuestions } = useContext(AuthContext);
+  const { user, getQuestions, setQuizData } = useContext(AuthContext);
   const standard = user?.class;
   const navigate = useNavigate();
 
@@ -42,6 +42,7 @@ const GameCard = ({
         </div>
         <Link
           onClick={async () => {
+            setQuizData([]);
             const data = await getQuestions(standard, subject);
             if (!data) navigate("/login");
             console.log(data);
