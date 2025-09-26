@@ -18,10 +18,42 @@ const GameCard = ({
   points,
   imageComponent,
   subject,
+  route,
 }) => {
   const { user, getQuestions, setQuizData } = useContext(AuthContext);
   const standard = user?.class;
   const navigate = useNavigate();
+
+  // 1. Check if this specific card is the MCQ quiz
+  const isQuiz = title === "Solve MCQ";
+
+  const handlePlayClick = async () => {
+    setQuizData([]);
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+
+    // 2. Use conditional logic based on whether it's a quiz or not
+    if (isQuiz) {
+      // If it's the quiz, fetch questions before navigating
+      console.log("Fetching quiz questions...");
+      const standard = user?.class;
+      const data = await getQuestions(standard, subject);
+
+      if (data) {
+        console.log("Quiz data fetched, navigating to /studentquiz");
+        navigate("/studentquiz");
+      } else {
+        console.error("Failed to get quiz data.");
+        // You can add an error message for the user here
+      }
+    } else {
+      // For all other games, navigate directly to their unique route
+      console.log(`Navigating directly to ${route}`);
+      navigate(route);
+    }
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-sm mx-auto flex flex-col">

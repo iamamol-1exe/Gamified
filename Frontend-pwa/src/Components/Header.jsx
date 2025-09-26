@@ -56,7 +56,7 @@ const Header = ({ onMenuClick }) => {
               />
             </svg>
           </div>
-          <Link to="/">
+          <Link to="/userpage">
             <h1 className="text-xl font-bold text-gray-800 hidden sm:block">
               STEM Quest
             </h1>
