@@ -71,6 +71,15 @@ const ScienceGamepage = () => {
       imageComponent: <ReactionBalancerImage />,
       route: "/reaction-balancer", // Add the route for the game
     },
+     {
+      title: "Molecule Mania",
+      description:
+        "Drag and drop elements to build molecules and learn about chemical compounds in this interactive game.",
+      difficulty: 2,
+      points: 60,
+      imageComponent: <MoleculeManiaImage />, 
+      route: "/molecule-mania", 
+    },
   ];
 
   return (

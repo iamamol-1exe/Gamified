@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import StarIcon from "../shapes/StarIcon";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
@@ -18,30 +18,39 @@ const GameCard = ({
   points,
   imageComponent,
   subject,
-  route, // 1. Add 'route' as a new prop
+  route,
 }) => {
   const { user, getQuestions } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // This function will only be used for the quiz card
-  const handlePlayQuiz = async (event) => {
-    event.preventDefault(); // Prevent navigation until questions are fetched
-    const standard = user?.class;
-    
-    // Check if the user is logged in before fetching
+  // 1. Check if this specific card is the MCQ quiz
+  const isQuiz = title === "Solve MCQ";
+
+  const handlePlayClick = async () => {
+    // First, always check if the user is logged in
     if (!user) {
       navigate("/login");
       return;
     }
 
-    const data = await getQuestions(standard, subject);
-    
-    if (data) {
-      console.log("Quiz data fetched, navigating...", data);
-      navigate("/studentquiz"); // Navigate after data is ready
+    // 2. Use conditional logic based on whether it's a quiz or not
+    if (isQuiz) {
+      // If it's the quiz, fetch questions before navigating
+      console.log("Fetching quiz questions...");
+      const standard = user?.class;
+      const data = await getQuestions(standard, subject);
+      
+      if (data) {
+        console.log("Quiz data fetched, navigating to /studentquiz");
+        navigate("/studentquiz");
+      } else {
+        console.error("Failed to get quiz data.");
+        // You can add an error message for the user here
+      }
     } else {
-      console.log("Failed to get quiz data.");
-      // Optionally, show an error message to the user
+      // For all other games, navigate directly to their unique route
+      console.log(`Navigating directly to ${route}`);
+      navigate(route);
     }
   };
 
@@ -62,25 +71,14 @@ const GameCard = ({
           </div>
           <span className="font-bold text-indigo-500">+{points} points</span>
         </div>
-        <Link
-          onClick={async () => {
-            const standard = user?.class;
-            if (!user) {
-              navigate("/login");
-              return;
-            }
-            const data = await getQuestions(standard, subject);
-            if (!data) {
-              console.log("Failed to get quiz data.");
-              return;
-            }
-            console.log(data);
-          }}
-          to="/studentquiz"
-          className="w-full bg-purple-700 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
+        
+        {/* 3. Replaced <Link> with a <button> that uses our smart handler */}
+        <button
+          onClick={handlePlayClick}
+          className="w-full bg-purple-700 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300 text-center"
         >
           Play Now
-        </Link>
+        </button>
       </div>
     </div>
   );
