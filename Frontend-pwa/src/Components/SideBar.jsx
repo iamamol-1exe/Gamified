@@ -14,30 +14,65 @@ import {
 } from "../shapes/DashBoardShapes";
 
 const Sidebar = ({ isOpen }) => {
-  const { logout } = useContext(AuthContext);
+  const { logout,user } = useContext(AuthContext);
   const navigate = useNavigate();
+    const userType = user?.userType;
 
   const handleLogout = () => {
     logout();
     navigate("/login");
   };
 
-  const navItems = [
-    { icon: HomeIcon, label: "Home", active: true },
-    {
-      icon: BarChart3Icon,
-      label: "Leaderboard",
-      onClick: () => navigate("/leaderboard"),
-    },
-    { icon: FolderClockIcon, label: "Offline Resources" },
-    { icon: AreaChartIcon, label: "Performance Insights" },
-    { icon: BellIcon, label: "Notifications" },
-    { icon: UserIcon, label: "User Profile" },
+  const commonNavItems = [
+  //  { icon: UserIcon, label: "User Profile", onClick: () => navigate("/profilepage") },
   ];
+  
+  const teacherNavItems = [
+    { icon: HomeIcon, label: "Home", onClick: () => navigate("/teacherdashboard") },
+    { icon: BarChart3Icon, label: "Student Performance", onClick: () => navigate("/studentperformance") },
+
+  ];
+  
+  const studentNavItems = [
+    { icon: HomeIcon, label: "Home", onClick: () => navigate("/userpage") },
+    // { icon: FolderClockIcon, label: "Offline Resources", onClick: () => navigate("/resources") },
+    { icon: BarChart3Icon, label: "Leaderboard", onClick: () => navigate("/leaderboard") },
+    // { icon: BellIcon, label: "Notifications", onClick: () => navigate("/notifications") },
+  ];
+  
+
+  let navItems = [...commonNavItems];
+  if (user?.userType === "teacher") {
+    navItems = [...navItems, ...teacherNavItems];
+  } else if (user?.userType === "student") {
+    navItems = [...navItems, ...studentNavItems];
+  }
+
+  // const navItems = [
+    // { 
+    //   icon: HomeIcon,
+    //   label: "Home",
+    //   path:"/userpage",
+    //   onClick: () => navigate("/userpage"),
+    // },
+    // {
+    //   icon: BarChart3Icon,
+    //   label: "Leaderboard",
+    //   onClick: () => navigate("/leaderboard"),
+    // },
+    // { icon: FolderClockIcon, label: "Offline Resources" },
+    // { icon: AreaChartIcon, label: "Performance Insights" },
+    // { icon: BellIcon, label: "Notifications" },
+    // { icon: UserIcon,
+    //   label: "User Profile",
+    //   onClick: () => navigate("/profilepage"),
+    //  },
+  // ];
 
   const bottomNavItems = [
+    { icon: UserIcon, label: "User Profile", onClick: () => navigate("/profilepage") },
     { icon: LogOutIcon, label: "Logout", onClick: handleLogout },
-    { icon: SettingsIcon, label: "Settings" },
+    // { icon: SettingsIcon, label: "Settings" },
   ];
 
   return (

@@ -10,9 +10,11 @@ const Dashboard = () => {
     <div className="space-y-8">
       <div className="lg:flex lg:space-x-8">
         <div className="flex-1">
+          
           <WelcomeBanner />
-          <Subjects />
           <DailyChallenges />
+          <Subjects />
+          
         </div>
         <div className="lg:w-80 mt-8 lg:mt-0">
           <div className="flex justify-between items-center mb-4">
