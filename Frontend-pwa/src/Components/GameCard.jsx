@@ -62,23 +62,17 @@ const GameCard = ({
           </div>
           <span className="font-bold text-indigo-500">+{points} points</span>
         </div>
-
-        {/* 2. Conditionally render the button based on the route */}
-        {route === "/studentquiz" ? (
-          <button
-            onClick={handlePlayQuiz}
-            className="w-full bg-purple-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
-          >
-            Play Quiz
-          </button>
-        ) : (
-          <Link
-            to={route} // Use the route prop for navigation
-            className="w-full text-center bg-indigo-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
-          >
-            Play Game
-          </Link>
-        )}
+        <Link
+          onClick={async () => {
+            const data = await getQuestions(standard, subject);
+            if (!data) navigate("/login");
+            console.log(data);
+          }}
+          to="/studentquiz"
+          className="w-full bg-purple-700 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors duration-300"
+        >
+          Play Now
+        </Link>
       </div>
     </div>
   );

@@ -47,19 +47,9 @@ const router = createBrowserRouter(
         <Route path="studentquiz" element={<StudentQuiz />} />
         <Route path="reaction-balancer" element={<ReactionBalancerPage />} />
         <Route path="userpage/Sciencepage" element={<ScienceGamepage />} />
-        
-        <Route
-          path="userpage/Technologypage"
-          element={<TechnologyGamepage />}
-        />
-        <Route
-          path="userpage/Mathematicspage"
-          element={<MathematicsGamepage />}
-        />
-        <Route
-          path="userpage/Engineeringpage"
-          element={<EngineeringGamepage />}
-        />
+        <Route path="userpage/Technologypage" element={<TechnologyGamepage />}/>
+        <Route path="userpage/Mathematicspage" element={<MathematicsGamepage />}/>
+        <Route path="userpage/Engineeringpage" element={<EngineeringGamepage />}/>
         <Route path="teacherdashboard" element={<TeacherDashboardPage />} />
       </Route>
     </>
