@@ -28,6 +28,7 @@ import TechnologyGamepage from "./pages/TechnologyGamepage.jsx";
 import MathematicsGamepage from "./pages/MathematicsGamepage.jsx";
 import EngineeringGamepage from "./pages/EngineeringGamepage.jsx";
 import TeacherDashboardPage from "./pages/TeacherDashboardPage.jsx";
+import ReactionBalancerPage from "./pages/ReactionBalancerPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,7 +45,9 @@ const router = createBrowserRouter(
         <Route path="studentperformance" element={<StudentPerformance />} />
         <Route path="quizform" element={<QuizForm />} />
         <Route path="studentquiz" element={<StudentQuiz />} />
+        <Route path="reaction-balancer" element={<ReactionBalancerPage />} />
         <Route path="userpage/Sciencepage" element={<ScienceGamepage />} />
+        
         <Route
           path="userpage/Technologypage"
           element={<TechnologyGamepage />}
