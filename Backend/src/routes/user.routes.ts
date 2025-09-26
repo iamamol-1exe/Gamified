@@ -1,7 +1,9 @@
 import express from "express";
 const { body } = require("express-validator");
 import {
+  getQuestionsController,
   logoutUserController,
+  updateUserController,
   userController,
   userLoginController,
   userProfileController,
@@ -56,5 +58,23 @@ router.post(
 router.get("/logout", authenticate, logoutUserController);
 
 router.get("/profile", authenticate, userProfileController);
+
+router.post(
+  "/getQuestions",
+  [
+    body("standard")
+      .isString()
+      .isLength({ min: 3 })
+      .withMessage("password must be at least 3 characters"),
+    body("subject")
+      .isString()
+      .isLength({ min: 3 })
+      .withMessage("password must be at least 3 characters"),
+  ],
+  authenticate,
+  getQuestionsController
+);
+
+router.post("/update", authenticate, updateUserController);
 
 export default router;

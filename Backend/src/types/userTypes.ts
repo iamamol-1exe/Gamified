@@ -8,5 +8,36 @@ export interface IUser extends mongoose.Document {
   schoolName: string;
   generateAuthToken(): string;
   hashPassword(password: string): Promise<string>;
-  comparePassword(password: string): Promise<boolean>; 
+  comparePassword(password: string): Promise<boolean>;
+}
+
+export interface IUserType {
+  _id?: string;
+  fullname: string;
+  email: string;
+  password: string;
+  socketId?: string;
+  class: string;
+  mobileNo?: number;
+  rollNo: string;
+  points: {
+    totalPoints: number;
+    science: number;
+    technology: number;
+    environment: number;
+    math: number;
+  };
+  badges: any[];
+  streaks: {
+    testSolved: {
+      science: number;
+      technology: number;
+      environment: number;
+      math: number;
+    };
+    maxDays: number;
+    currentStreak: number;
+  };
+  schoolName?: string;
+  userType: string;
 }

@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import synchronizedUser from "../utils/syncUser";
+import { useNavigate } from "react-router-dom";
 
 // Mock data to simulate fetching from a database
 
 // Reusable Modal Component for messages
 const MessageModal = ({ message, onOk }) => (
-  <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center z-50">
+  <div className="fixed inset-0 bg-gray-100 bg-opacity-50 flex items-center justify-center z-50">
     <div className="bg-white rounded-xl p-6 shadow-xl text-center max-w-sm w-full">
       <p className="text-lg font-semibold text-gray-800 mb-4">{message}</p>
       <button
         onClick={onOk}
-        className="px-6 py-2 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition"
+        className="px-6 py-2 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-800 transition"
       >
         OK
       </button>
@@ -19,10 +21,11 @@ const MessageModal = ({ message, onOk }) => (
 );
 
 const StudentQuiz = () => {
-  const { quizData } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { quizData, user, setUser, setQuizData } = useContext(AuthContext);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
-  const [timeLeft, setTimeLeft] = useState(1 * 10); // 15 minutes in seconds
+  const [timeLeft, setTimeLeft] = useState(1 * 60); // 15 minutes in seconds
   const [isQuizComplete, setIsQuizComplete] = useState(false);
   const [message, setMessage] = useState(null);
 
@@ -67,18 +70,42 @@ const StudentQuiz = () => {
     }
   };
 
-  const handleSubmitQuiz = () => {
-    let score = 0;
-    quizData.forEach((question, index) => {
-      if (userAnswers[index] === question.answer) {
-        score++;
-      }
-    });
-    setMessage(
-      `Quiz submitted! You scored ${score} out of ${quizData.length}.`
-    );
+  const handleSubmitQuiz = async () => {
+    if (user) {
+      let score = 0;
+      quizData.forEach((question, index) => {
+        if (userAnswers[index] === question.answer) {
+          score++;
+        }
+      });
+      const subject = quizSubject.toLowerCase();
+      const points = user.points || {};
+      const streaks = user.streaks || {};
+      const testSolved = streaks.testSolved || {};
+      // Initialize subject points and totalPoints if they don't exist
+      points[subject] = (points[subject] || 0) + score;
+      points.totalPoints = (points.totalPoints || 0) + score;
+      testSolved[subject] = (testSolved[subject] || 0) + 1;
 
-    // send result to database
+      const newStreaks = { ...streaks, testSolved };
+
+      // Create a new user object with the updated points
+      const updatedUser = { ...user, points, streaks: newStreaks };
+      await synchronizedUser(updatedUser);
+      setUser(updatedUser);
+      console.log("updated user :", updatedUser);
+
+      setMessage(
+        `Quiz submitted! You scored ${score} out of ${quizData.length}.`
+      );
+      setTimeout(() => {
+        setMessage(null);
+        setQuizData([]);
+        navigate("/userpage");
+      }, 2000);
+    } else {
+      return;
+    }
   };
 
   return (
@@ -135,9 +162,7 @@ const StudentQuiz = () => {
       <div className="container bg-white rounded-xl shadow-lg p-6 w-full max-w-4xl mb-8">
         <header className="flex justify-between items-center pb-4 border-b border-gray-200">
           <div className="flex items-center space-x-2">
-            <span className="text-3xl font-bold text-indigo-600">
-              STEM Quest
-            </span>
+            <span className="text-3xl font-bold text-gray-600">STEM Quest</span>
           </div>
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-4 text-sm font-medium">

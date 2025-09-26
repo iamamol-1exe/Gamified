@@ -3,6 +3,7 @@ import PropTypes from "prop-types"; // Add PropTypes import
 import { BellIcon } from "../shapes/DashBoardShapes";
 import NotificationDropdown from "./NotificationDropdown";
 import ProfileDropdown from "./ProfileDropdown";
+import { Link } from "react-router-dom";
 // import { useAuth } from "../context/AuthContext"; // Commented out for now
 
 const Header = ({ onMenuClick }) => {
@@ -55,9 +56,11 @@ const Header = ({ onMenuClick }) => {
               />
             </svg>
           </div>
-          <h1 className="text-xl font-bold text-gray-800 hidden sm:block">
-            STEM Quest
-          </h1>
+          <Link to="/">
+            <h1 className="text-xl font-bold text-gray-800 hidden sm:block">
+              STEM Quest
+            </h1>
+          </Link>
         </div>
       </div>
 
