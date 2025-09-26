@@ -72,24 +72,37 @@ export const AuthProvider = ({ children }) => {
     const syncUserData = async () => {
       try {
         const token = localStorage.getItem("token");
-        const url = import.meta.env.VITE_USER_PROFILE_URL;
+        const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+        const API_ENDPOINTS = {
+          student: `${API_BASE_URL}/user/api/profile`,
+          teacher: `${API_BASE_URL}/teacher/api/profile`,
+          admin: `${API_BASE_URL}/admin/api/profile`,
+        };
 
-        if (!url || !token) {
+        const endpoint = API_ENDPOINTS[user.userType];
+        console.log(endpoint);
+        if (!endpoint || !token) {
           return;
         }
 
-        const response = await axios.get(url, {
+        const response = await axios.get(endpoint, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
         });
+        console.log(response);
 
         if (response.data && response.data.user) {
           const serverUser = response.data.user;
+
+          // Only update if there are meaningful differences
           if (JSON.stringify(serverUser) !== JSON.stringify(user)) {
+            console.log("Differences detected, updating user data");
             setUser(serverUser);
             console.log("User data synchronized with server");
+          } else {
+            console.log("No changes detected in user data");
           }
         }
       } catch (error) {

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import {
   AreaChartIcon,
@@ -24,7 +24,11 @@ const Sidebar = ({ isOpen }) => {
 
   const navItems = [
     { icon: HomeIcon, label: "Home", active: true },
-    { icon: BarChart3Icon, label: "Leaderboard" },
+    {
+      icon: BarChart3Icon,
+      label: "Leaderboard",
+      onClick: () => navigate("/leaderboard"),
+    },
     { icon: FolderClockIcon, label: "Offline Resources" },
     { icon: AreaChartIcon, label: "Performance Insights" },
     { icon: BellIcon, label: "Notifications" },
@@ -77,12 +81,13 @@ const Sidebar = ({ isOpen }) => {
         {navItems.map((item, index) => (
           <a
             key={index}
-            href="#"
+            onClick={item.onClick}
             className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
               item.active
                 ? "bg-purple-600 text-white"
                 : "text-gray-300 hover:bg-gray-700 hover:text-white"
             }`}
+            style={{ cursor: 'pointer' }}
           >
             <item.icon className="w-5 h-5" />
             <span>{item.label}</span>
