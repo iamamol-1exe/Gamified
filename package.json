@@ -8,7 +8,9 @@
     "dev": "concurrently \"cd Backend && npm run dev\" \"cd Frontend-pwa && npm run dev\"",
     "install:all": "npm install && cd Backend && npm install && cd ../Frontend-pwa && npm install",
     "start": "cd Backend && npm start",
-    "vercel-build": "cd Frontend-pwa && npm install && npm run build"
+    "vercel-build": "npm install && cd Backend && npm install && cd ../Frontend-pwa && npm install && npm run build",
+    "build:backend": "cd Backend && npm run build",
+    "test:build": "npm run build:backend && npm run build"
   },
   "workspaces": [
     "Backend",
