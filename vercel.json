@@ -13,6 +13,11 @@
       "use": "@vercel/node"
     }
   ],
+  "functions": {
+    "api/*.ts": {
+      "maxDuration": 30
+    }
+  },
   "routes": [
     {
       "src": "/health",
@@ -39,6 +44,6 @@
       "dest": "Frontend-pwa/dist/$1"
     }
   ],
-  "installCommand": "npm install && cd Frontend-pwa && npm install",
+  "installCommand": "npm install && cd Backend && npm install && cd ../Frontend-pwa && npm install",
   "buildCommand": "cd Frontend-pwa && npm run build"
 }
