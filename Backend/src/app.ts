@@ -9,10 +9,26 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
-const allowedDomains = [" ", "http://localhost:5173", "http://localhost:8080"];
+const allowedDomains = process.env.CORS_ORIGIN?.split(",") || [
+  "http://localhost:5173",
+  "http://localhost:8080",
+  "http://localhost:3000",
+];
+
 app.use(
   cors({
-    origin: allowedDomains,
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+
+      // Check if the origin is in the allowed domains or is a Vercel deployment
+      if (allowedDomains.includes(origin) || origin.includes(".vercel.app")) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("Not allowed by CORS"));
+    },
+    credentials: true,
   })
 );
 app.use(cookieParser());

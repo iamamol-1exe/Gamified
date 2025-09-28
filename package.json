@@ -1,0 +1,36 @@
+{
+  "name": "gamified-project",
+  "version": "1.0.0",
+  "description": "A gamified learning platform",
+  "private": true,
+  "scripts": {
+    "build": "cd Frontend-pwa && npm run build",
+    "dev": "concurrently \"cd Backend && npm run dev\" \"cd Frontend-pwa && npm run dev\"",
+    "install:all": "npm install && cd Backend && npm install && cd ../Frontend-pwa && npm install",
+    "start": "cd Backend && npm start",
+    "vercel-build": "cd Frontend-pwa && npm install && npm run build"
+  },
+  "workspaces": [
+    "Backend",
+    "Frontend-pwa"
+  ],
+  "devDependencies": {
+    "@vercel/node": "^2.3.0",
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-validator": "^7.2.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "winston": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

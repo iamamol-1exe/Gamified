@@ -13927,3 +13927,50 @@
 {"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-26 23:58:36"}
 {"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-26 23:58:36"}
 {"level":"warn","message":"MongoDB disconnected","service":"backend-api","timestamp":"2025-09-27 00:19:49"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-27 00:53:36"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-27 00:53:36"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-27 00:53:36"}
+{"level":"info","message":"MongoDB Connected: ac-l4izwts-shard-00-00.yzoad6m.mongodb.net","service":"backend-api","timestamp":"2025-09-27 00:53:36"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-27 00:53:36"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-27 00:53:36"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-27 16:26:48"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-27 16:26:48"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-27 16:26:48"}
+{"level":"info","message":"MongoDB Connected: ac-l4izwts-shard-00-01.yzoad6m.mongodb.net","service":"backend-api","timestamp":"2025-09-27 16:26:58"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-27 16:26:58"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-27 16:26:58"}
+{"level":"info","message":"SIGINT received, shutting down gracefully...","service":"backend-api","timestamp":"2025-09-27 18:57:16"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-27 20:28:40"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-27 20:28:40"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-27 20:28:40"}
+{"level":"info","message":"MongoDB Connected: ac-l4izwts-shard-00-02.yzoad6m.mongodb.net","service":"backend-api","timestamp":"2025-09-27 20:28:41"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-27 20:28:41"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-27 20:28:41"}
+{"level":"warn","message":"MongoDB disconnected","service":"backend-api","timestamp":"2025-09-27 21:11:43"}
+{"level":"warn","message":"MongoDB disconnected","service":"backend-api","timestamp":"2025-09-27 23:36:42"}
+{"level":"warn","message":"MongoDB disconnected","service":"backend-api","timestamp":"2025-09-27 23:54:45"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-28 01:30:28"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-28 01:30:29"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-28 01:30:29"}
+{"level":"info","message":"MongoDB Connected: ac-l4izwts-shard-00-01.yzoad6m.mongodb.net","service":"backend-api","timestamp":"2025-09-28 01:30:29"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-28 01:30:29"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-28 01:30:29"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-28 12:21:41"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-28 12:21:41"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-28 12:21:41"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-28 12:21:41"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-28 12:21:41"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-28 12:21:41"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-28 12:24:26"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-28 12:24:26"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-28 12:24:26"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-28 12:24:26"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-28 12:24:26"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-28 12:24:26"}
+{"level":"info","message":"🚀 Starting server...","service":"backend-api","timestamp":"2025-09-28 12:46:27"}
+{"level":"info","message":"🌟 Server running on port 4000 in development mode","service":"backend-api","timestamp":"2025-09-28 12:46:27"}
+{"level":"info","message":"🔗 Health check available at http://localhost:4000/health","service":"backend-api","timestamp":"2025-09-28 12:46:27"}
+{"level":"info","message":"MongoDB Connected: 127.0.0.1","service":"backend-api","timestamp":"2025-09-28 12:46:27"}
+{"level":"info","message":"✅ Database connected successfully","service":"backend-api","timestamp":"2025-09-28 12:46:27"}
+{"level":"info","message":"🎉 Server startup completed","service":"backend-api","timestamp":"2025-09-28 12:46:27"}
+{"level":"info","message":"SIGINT received, shutting down gracefully...","service":"backend-api","timestamp":"2025-09-28 12:54:08"}

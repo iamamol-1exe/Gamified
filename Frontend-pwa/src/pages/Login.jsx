@@ -141,6 +141,7 @@ const Login = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
+                  required
                   id="email"
                   placeholder="Enter your Email here"
                   className="w-full px-4 py-3 bg-gray-300 border-gray-300 rounded-xl placeholder:text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
@@ -158,6 +159,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   type="password"
+                  required
                   id="password"
                   placeholder="Enter your Password here"
                   className="w-full px-4 py-3 bg-gray-300 border-gray-300 rounded-xl placeholder:text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 transition"
