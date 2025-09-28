@@ -152,6 +152,7 @@ const Registration = () => {
                 </label>
                 <input
                   value={fullname}
+                  required
                   onChange={(e) => setFullname(e.target.value)}
                   type="text"
                   placeholder="Your full name"
@@ -164,6 +165,7 @@ const Registration = () => {
                   Email
                 </label>
                 <input
+                required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
@@ -180,6 +182,7 @@ const Registration = () => {
                       School
                     </label>
                     <input
+                      required
                       value={school}
                       onChange={(e) => setSchool(e.target.value)}
                       type="text"
@@ -193,6 +196,7 @@ const Registration = () => {
                       Class
                     </label>
                     <input
+                      required
                       value={std}
                       onChange={(e) => setStd(e.target.value)}
                       type="text"
@@ -205,7 +209,8 @@ const Registration = () => {
                     <label className="block text-sm font-medium text-gray-600 mb-1 text-left">
                       Mobile Number
                     </label>
-                    <input
+                    <input 
+                      required
                       value={number}
                       onChange={(e) => setNumber(e.target.value)}
                       type="text"
@@ -218,7 +223,8 @@ const Registration = () => {
                     <label className="block text-sm font-medium text-gray-600 mb-1 text-left">
                       Roll No
                     </label>
-                    <input
+                    <input 
+                      required
                       value={rollno}
                       onChange={(e) => setRollNo(e.target.value)}
                       type="text"
@@ -239,6 +245,7 @@ const Registration = () => {
                     value={school}
                     onChange={(e) => setSchool(e.target.value)}
                     type="text"
+                    required
                     placeholder="Enter your school name"
                     className="w-full px-4 py-3 bg-gray-300 rounded-xl"
                   />
@@ -254,6 +261,7 @@ const Registration = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   type="password"
+                  required
                   placeholder="Enter your Password"
                   className="w-full px-4 py-3 bg-gray-300 rounded-xl"
                 />
