@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Frontend-pwa/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "Frontend-pwa/dist"
+      }
+    },
+    {
+      "src": "api/*.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/health",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/user/api/(.*)",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/teacher/api/(.*)",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/admin/api/(.*)",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/index"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "Frontend-pwa/dist/$1"
+    }
+  ],
+  "installCommand": "npm install && cd Frontend-pwa && npm install",
+  "buildCommand": "cd Frontend-pwa && npm run build"
+}
