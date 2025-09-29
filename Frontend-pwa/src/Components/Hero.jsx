@@ -15,7 +15,7 @@ const Hero = () => (
             "2px 2px 0 #c7d2fe, -2px -2px 0 #c7d2fe, 2px -2px 0 #c7d2fe, -2px 2px 0 #c7d2fe, 2px 2px 5px rgba(0,0,0,0.2)",
         }}
       >
-        STEM Quest
+        Lakshya
       </h1>
       <h2 className="text-2xl text-gray-700 font-semibold mb-6">
         Your gamified learning companion

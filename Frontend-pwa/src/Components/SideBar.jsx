@@ -99,7 +99,7 @@ const Sidebar = ({ isOpen }) => {
               />
             </svg>
           </div>
-          <h1 className="text-xl font-bold">STEM Quest</h1>
+          <h1 className="text-xl font-bold">Lakshya</h1>
         </div>
       </div>
       <div className="p-4">

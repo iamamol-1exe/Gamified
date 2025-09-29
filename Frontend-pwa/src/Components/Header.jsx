@@ -58,7 +58,7 @@ const Header = ({ onMenuClick }) => {
           </div>
           <Link to="/userpage">
             <h1 className="text-xl font-bold text-gray-800 hidden sm:block">
-              STEM Quest
+              Lakshya
             </h1>
           </Link>
         </div>
